@@ -1,3 +1,19 @@
 .heading-container {
     margin-top: 5rem;
 }
+
+.custom-button:active,
+.custom-button:hover {
+    background-color: rgba(67, 67, 235, 0.726);
+}
+
+.button-text {
+    color: white;
+    text-decoration: none;
+}
+
+.button-text:active,
+.button-text:hover {
+    color: orange;
+    text-decoration: none;
+}

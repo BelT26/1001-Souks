@@ -13,10 +13,9 @@
     <div class="products-container">
         {% for product in products %}
         <img src="{{product.image.url}}" width="200">
-        <h3>{{product.name}}</h3>
-        <p>{{product.description}}</p>
+        <h3><a href="{% url 'product_info' product.id %}">{{product.name}}</a></h3>
+        <p>{{product.category}}</p>
         <p>£ {{product.price}}</p>
-
         {% endfor %}
     </div>    
 {% endblock %}
