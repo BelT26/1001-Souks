@@ -4,6 +4,11 @@ from django.db import models
 # Create your models here.
 class Category(models.Model):
     """A model to created categories that the products will be divided into"""
+
+    class Meta:
+        """returns the correct plural spelling in the admin panel"""
+        verbose_name_plural = 'Categories'
+
     name = models.CharField(max_length=200, blank=False, null=False)
 
     def __str__(self):
