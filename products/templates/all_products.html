@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<!-- link to custom css file -->
+<link rel="stylesheet" href="{% static 'css/products.css' %}">
+{% endblock %}
+
+{% block content %}
+    <h2 class="display-3">All Products</h2>
+{% endblock %}

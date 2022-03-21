@@ -5,5 +5,20 @@
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-    top: 70px;    
+    top: 70px; 
+    display: flex;
+    align-items: flex-end;
+    justify-content: left;  
+}
+
+#main-header-container {
+    background-color: rgba(2, 86, 155, 0.85);
+    color: white;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    padding: 0.25rem 2rem;
+}
+
+#about-container {
+    margin-top: 100px;
 }
