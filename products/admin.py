@@ -1,8 +1,14 @@
 from django.contrib import admin
 from .models import Product, Category
 
+
 # Register your models here.
-admin.site.register(Category)
+@admin.site.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
+    """determines how category details are displayed in the admin panel"""
+    list_display = ('name', 'location')
+  
+    ordering_by = ('name',)
 
 
 @admin.register(Product)
@@ -11,3 +17,5 @@ class ProductAdmin(admin.ModelAdmin):
     list_filter = ('category',)
     list_display = ('name', 'category', 'price', 'rating')
     search_fields = ['name', 'category']
+
+    ordering = ('price',)
