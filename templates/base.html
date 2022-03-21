@@ -34,12 +34,14 @@
                         Products
                       </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Leather</a>
-                        <a class="dropdown-item" href="#">Metalwork</a>
-                        <a class="dropdown-item" href="#">Jewellery</a>
-                        <a class="dropdown-item" href="#">Textiles</a>
-                        <a class="dropdown-item" href="#">Ceramics</a>
-                      </div>
+                        <a class="dropdown-item" href="{% url 'category' 'leather' %}">Leather</a>
+                        <a class="dropdown-item" href="{% url 'category' 'metalwork' %}">Metalwork</a>
+                        <a class="dropdown-item" href="{% url 'category' 'jewellery' %}">Jewellery</a>
+                        <a class="dropdown-item" href="{% url 'category' 'textiles' %}"s>Textiles</a>
+                        <a class="dropdown-item" href="{% url 'category' 'ceramics' %}">Ceramics</a>
+                        <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="{% url 'products' %}">All Products</a>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact Us</a>
