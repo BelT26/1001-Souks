@@ -1,4 +1,9 @@
 #hero-img-container {
-    height: 50vh;
-    background-image: url;
+    height: 64vh;
+    width: 90%;
+    background-image: url(../../../media/max-brown-ORRAMzk5ErQ-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 70px;    
 }
