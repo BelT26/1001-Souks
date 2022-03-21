@@ -3,11 +3,11 @@ from .models import Product, Category
 
 
 # Register your models here.
-@admin.site.register(Category)
+@admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
     """determines how category details are displayed in the admin panel"""
     list_display = ('name', 'location')
-  
+
     ordering_by = ('name',)
 
 
