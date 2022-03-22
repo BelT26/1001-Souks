@@ -8,6 +8,19 @@
 
 {% block content %}
     <div class="heading-container">
-        <h2 class="display-3">{{category|capfirst}}</h2>
+        {% for category in categories %}
+        <div class="row">
+            <h2 class="display-3">{{category.name|capfirst}}</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{category.image.url}}" width="200">
+            </div>
+            <div class="col-md-6">
+                <p class="lead">{{category.desription}}</h2>
+            </div>
+        </div>
+        
+        {% endfor %}
     </div>
 {% endblock %}

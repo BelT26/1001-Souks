@@ -15,5 +15,9 @@
     <p>{{product.description}}</p>
     <p>£ {{product.price}}</p>
     <button class="btn btn-primary mb-5 custom-btn"><a class="button-text" href="{% url 'products' %}">Continue Shopping</a></button>
-</div>   
+</div> 
+
+{% for category in categories %}
+<h2>{{category.name}}</h2>
+{% endfor %}
 {% endblock %}
