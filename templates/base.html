@@ -16,15 +16,16 @@
     <body>
         <header class="container-fluid fixed-top px-0">
             <nav class="navbar navbar-expand-lg navbar-dark w-100" id="main-nav">
-                <p><a class="navbar-brand" href="#"><i class="fas fa-store"></i>1001 Souks</a></p>
+                <div class="col-md-6">
+                  <p><a class="navbar-brand" href="#"><i class="fas fa-store"></i>1001 Souks</a></p>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
               
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Home</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#">Map</a>
@@ -34,10 +35,10 @@
                         Products
                       </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{% url 'category' 'leather' %}">Leather</a>
-                        <a class="dropdown-item" href="{% url 'category' 'metalwork' %}">Metalwork</a>
+                        <a class="dropdown-item" href="{% url 'category' 'leather'%}">Leather</a>
+                        <a class="dropdown-item" href="{% url 'category' 'metalwork'%}">Metalwork</a>
                         <a class="dropdown-item" href="{% url 'category' 'jewellery' %}">Jewellery</a>
-                        <a class="dropdown-item" href="{% url 'category' 'textiles' %}"s>Textiles</a>
+                        <a class="dropdown-item" href="{% url 'category' 'textiles' %}">Textiles</a>
                         <a class="dropdown-item" href="{% url 'category' 'ceramics' %}">Ceramics</a>
                         <div class="dropdown-divider"></div>
                           <a class="dropdown-item" href="{% url 'products' %}">All Products</a>
@@ -47,10 +48,26 @@
                         <a class="nav-link" href="#">Contact Us</a>
                       </li>
                   </ul>
-                  <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn my-2 my-sm-0" type="submit">Search</button>
-                  </form>
+                  <ul class="navbar-nav ml-auto">
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'account_signup' %}">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                    </li>
+                    {% endif %}
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Basket</a>
+                  </li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+
                 </div>
               </nav>
         </header>

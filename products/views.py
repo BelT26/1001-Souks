@@ -12,9 +12,9 @@ def all_products(request):
     return render(request, 'products/all_products.html', context)
 
 
-def chosen_category(request, category_id):
+def chosen_category(request, category_name):
     """returns a page with information and products relating to the selected category"""
-    selected_category = get_object_or_404(Category, pk=category_id)
+    selected_category = get_object_or_404(Category, name=category_name)
     selected_products = Product.objects.filter(category=selected_category)
     context = {
         'category': selected_category,
