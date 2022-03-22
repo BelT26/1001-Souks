@@ -34,7 +34,10 @@
                       </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{% url 'products'%}?category=Leather">Leather</a>
-                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?category=Textiles">Textiles</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?category=Metalwork">Metalwork</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?category=Jewellery">Jewellery</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?category=Ceramics">Ceramics</a>
                         <div class="dropdown-divider"></div>
                           <a class="dropdown-item" href="{% url 'products' %}">All Products</a>
                       </div>
