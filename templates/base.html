@@ -15,13 +15,11 @@
     </head>
     <body>
         <header class="container-fluid fixed-top px-0">
-            <nav class="navbar navbar-expand-lg navbar-dark w-100" id="main-nav">
-                <div class="col-md-6">
-                  <p><a class="navbar-brand" href="#"><i class="fas fa-store"></i>1001 Souks</a></p>
+            <nav class="navbar navbar-expand-lg navbar-dark w-100" id="main-nav">              
+                <span><a class="navbar-brand" href="#"><i class="fas fa-store"></i> 1001 Souks</a></span>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-              
+                <span class="navbar-toggler-icon"></span>
+                </button>              
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
@@ -42,13 +40,11 @@
                         <a class="dropdown-item" href="{% url 'category' 'ceramics' %}">Ceramics</a>
                         <div class="dropdown-divider"></div>
                           <a class="dropdown-item" href="{% url 'products' %}">All Products</a>
-                        </div>
+                      </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact Us</a>
-                      </li>
-                  </ul>
-                  <ul class="navbar-nav ml-auto">
+                    </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
@@ -65,11 +61,22 @@
                       <a class="nav-link" href="#">Basket</a>
                   </li>
                   </ul>
-                </div>
-                <div class="col-md-6">
-
-                </div>
-              </nav>
+                </div>   
+            </nav>
+            <div class="row" id="search-container">              
+                <form method="GET" action="{% url 'products' %}">
+                    <div class="input-group w-100">
+                        <input class="form-control" type="text" name="q" placeholder="Search products">
+                        <div class="input-group-append">
+                            <button class="form-control btn" type="submit">
+                                <span class="icon">
+                                    <i class="fal fa-search"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>           
+            </div>
         </header>
         {% if messages %}
         <div class="message-container"></div>
