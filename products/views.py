@@ -8,7 +8,7 @@ from .models import Product, Category
 def all_products(request):
     """returns a view of all available products
     or those matching a query if a search term is
-    provided. code copied from boutique ado project"""
+    provided. code adapted from boutique ado project"""
     products = Product.objects.all()
     query = None
     categories = None
@@ -20,6 +20,7 @@ def all_products(request):
             categories = Category.objects.filter(name__in=categories)
             context = {
                 'categories': categories,
+                'products': products,
             }
             return render(request, 'products/category.html', context)
 

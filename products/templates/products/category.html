@@ -9,18 +9,30 @@
 {% block content %}
     <div class="heading-container">
         {% for category in categories %}
-        <div class="row">
-            <h2 class="display-3">{{category.name|capfirst}}</h2>
+        <div class="row w-100">
+            <div class="col">
+                <h2 class="display-3 text-center">{{category.name|capfirst}}</h2>
+            </div>            
         </div>
-        <div class="row">
-            <div class="col-md-6">
-                <img src="{{category.image.url}}" width="200">
+        <div class="row my-5 px-3">
+            <div class="col-md-6 category-img-container">
+                <img src="{{category.image.url}}" width="600">
             </div>
             <div class="col-md-6">
-                <p class="lead">{{category.desription}}</h2>
+                <p class="lead">{{category.description}}</h2>
             </div>
         </div>
-        
+        {% endfor %}        
+    </div>
+    <hr>
+    <div class="products-container my-5">
+        {% for product in products %}
+        <div class="item-container container">
+            <img src="{{product.image.url}}" width="200">
+            <h3><a href="{% url 'product_info' product.id %}">{{product.name}}</a></h3>
+            <p>{{product.category}}</p>
+            <p>£ {{product.price}}</p>
+        </div>
         {% endfor %}
     </div>
 {% endblock %}

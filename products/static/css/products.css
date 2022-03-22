@@ -1,5 +1,5 @@
 .heading-container {
-    margin-top: 5rem;
+    margin-top: 120px;
 }
 
 .custom-button:active,
@@ -16,4 +16,10 @@
 .button-text:hover {
     color: orange;
     text-decoration: none;
+}
+
+.category-img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
