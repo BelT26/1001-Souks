@@ -3,7 +3,7 @@ from django.db import models
 
 # Create your models here.
 class Category(models.Model):
-    """A model to created categories that the products will be divided into"""
+    """A model to represent the categories that the products will be divided into"""
 
     class Meta:
         """returns the correct plural spelling in the admin panel"""
