@@ -1,9 +1,11 @@
 from django.db import models
 from products.models import Category
 
+
 # Create your models here.
 class City(models.Model):
-    """A model to  represent the cities that are known for producing certain product categories"""
+    """A model to  represent the cities that are known for producing certain
+    product categories"""
 
     class Meta:
         """returns the correct plural spelling in the admin panel"""

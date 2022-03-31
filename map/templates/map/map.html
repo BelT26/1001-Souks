@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<!-- link to custom css file -->
+<link rel="stylesheet" href="{% static 'css/map.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="display-4">Locations</h1>
+    <div id="map-container"></div> 
+</div>
+    
+{% endblock %}
+{% block extra_js %}
+<!-- link to javascript file to connect to google maps api -->
+<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAe_MtKgYo4PVs0HC0QO2u0ihf9TD-a6ms&callback=initMap"></script>
+<script src="{% static 'map/js/map.js' %}"></script>
+{% endblock %}
