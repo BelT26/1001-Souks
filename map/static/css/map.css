@@ -1,5 +1,13 @@
+.location-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    flex-direction: column;
+    margin-top: 5rem;
+}
+
 #map-container {
     width: 90vw;
     height: 70vh;
-    margin-top: 12rem;
 }
