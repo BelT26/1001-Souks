@@ -1,7 +1,6 @@
 #main-nav {
     background-color: #EDC54D;
     padding: 0.7rem;
-    color: #66023C;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -13,7 +12,10 @@
 #main-footer {
     background-color: #EDC54D ;
     padding: 1rem;
-    color: #66023C;
+}
+
+#main-footer h4 {
+    color:#66023C
 }
 
 #main-footer li {
@@ -21,7 +23,7 @@
 }
 
 #main-footer i {
-    color: white;
+    color: #66023C;
     font-size: 2.5rem;
     float:right;
     padding: 0 3rem;
@@ -29,5 +31,5 @@
 
 #main-footer i:active,
 #main-footer i:hover {
-    color: rgb(5, 152, 196);
+    color:#2978D6;
 }
