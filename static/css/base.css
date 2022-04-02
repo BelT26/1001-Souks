@@ -1,11 +1,19 @@
 #main-nav {
-    background-color: rgb(197, 90, 18);
-    padding: 1rem;
+    background-color: #EDC54D;
+    padding: 0.7rem;
+    color: #66023C;
 }
 
+.navbar-light .navbar-nav .nav-link {
+    color: #66023C !important;
+    font-size: larger;
+}
+
+
 #main-footer {
-    background-color: rgb(197, 90, 18);
+    background-color: #EDC54D ;
     padding: 1rem;
+    color: #66023C;
 }
 
 #main-footer li {
