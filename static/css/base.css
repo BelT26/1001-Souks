@@ -9,13 +9,16 @@
     font-size: larger;
 }
 
-#search-container i {
+#search-dropdown {
     color: #66023C !important;
-}
-
-#search-container .input-group {
     border: #66023C 1px solid;
     border-radius: 3px;
+    width: 300px;
+    padding: 0 !important;
+}
+
+#search-dropdown .i {
+    color: #66023C !important;
 }
 
 h1 {

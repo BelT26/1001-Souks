@@ -56,6 +56,23 @@
                           <li class="nav-item mx-2">
                               <a class="nav-link nav-text" href="#">Contact</a>
                           </li>
+                          <li class="dropdown nav-item mx-e">
+                            <a href="#" class="dropdown-toggle nav-link nav-text" data-toggle="dropdown">Search</a>
+                            <div class="dropdown-menu dropdown-form" id="search-dropdown">
+                                <form method="GET" action="{% url 'products' %}">
+                                    <div class="input-group">
+                                        <input class="form-control" type="text" name="q" placeholder="Search products">
+                                        <div class="input-group-append">
+                                            <button class="form-control btn" id="search-button" type="submit">
+                                                <span class="icon">
+                                                    <i class="fas fa-search"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>           
+                            </div>
+                            </li>
                         </ul>
                     </div>
                     <div class="col-md-4 d-flex justify-content-end" id="navbar-right"> 
@@ -74,25 +91,11 @@
                             {% endif %}
                             <li class="nav-item mx-2 ">
                               <a class="nav-link nav-text" href="#">Basket</a>
-                          </li>
+                          </li>                         
                         </ul>
                     </div>
                 </div>  
             </nav>
-            <div class="row p-3 d-flex justify-content-center" id="search-container">              
-                <form method="GET" action="{% url 'products' %}">
-                    <div class="input-group w-100">
-                        <input class="form-control" type="text" name="q" placeholder="Search products">
-                        <div class="input-group-append">
-                            <button class="form-control btn" type="submit">
-                                <span class="icon">
-                                    <i class="fas fa-search"></i>
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </form>           
-            </div>
         </header>
         <div id="main-container">
             {% if messages %}
