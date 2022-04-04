@@ -1,6 +1,7 @@
 #main-nav {
     background-color: #EDC54D;
     padding: 0.7rem;
+    height: 4rem;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -17,9 +18,20 @@
     border-radius: 3px;
 }
 
+h1 {
+    color: #66023C;
+}
+
+#main-container {
+    height: calc(100vh - 7rem);
+    position: relative;
+    top: 4rem;
+}
+
 #main-footer {
     background-color: #EDC54D ;
     padding: 1rem;
+    height: 3rem;
 }
 
 #main-footer h4 {
