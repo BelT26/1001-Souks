@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<!-- link to custom css file -->
+<link rel="stylesheet" href="{% static 'basket/css/basket.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="text-center my-2">
+            <h1 class=""display-4>Your Basket</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col md-6"></div>
+        {% if basket_contents %}
+        <div class="col">Bag Items</div>
+        {% else %}
+        <div class="col md-6">Empty Bag</div>
+        {% endif %}
+    </div>
+    </div>
+</div>
+{% endblock %}
