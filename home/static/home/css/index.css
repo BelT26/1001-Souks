@@ -1,7 +1,7 @@
 #hero-img-container {
     width: 100%;
-    height: 70vh;
-    background-image: url(../../../../media/product_selection.jpg);
+    height: 80vh;
+    background-image: url(../../../../media/shoes-cropped.JPG);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -10,8 +10,10 @@
 }
 
 #main-header-container {
-    background-color: rgba(2, 86, 155, 0.85);
+    background-color:#205ba3;
+    opacity: 0.85;
     color: white;
+    float:right;
     margin-left: 2rem;
     margin-bottom: 2rem;
     padding: 0.25rem 2rem;
@@ -20,7 +22,6 @@
 #about-container {
     height: 50vh;
 }
-
 
 #about-img img {
     max-width: 350px;
