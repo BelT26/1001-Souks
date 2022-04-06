@@ -11,14 +11,14 @@
         {% for category in categories %}
         <div class="row w-100">
             <div class="col">
-                <h2 class="display-3 text-center">{{category.name|capfirst}}</h2>
+                <h1 class="display-3 mt-2 text-center purple-text">{{category.name|capfirst}}</h1>
             </div>            
         </div>
-        <div class="row my-5 px-3">
-            <div class="col-md-6 category-img-container">
+        <div class="row mt-3 px-3">
+            <div class="col-lg-6 category-img-container">
                 <img src="{{category.image.url}}" width="600">
             </div>
-            <div class="col-md-6">
+            <div class="col-lg-6">
                 <p class="lead">{{category.description}}</h2>
             </div>
         </div>
@@ -27,7 +27,7 @@
     <hr>
     <div class="products-container my-5">
         {% for product in products %}
-        <div class="item-container container">
+        <div class="item-container container-fluid">
             <img src="{{product.image.url}}" width="200">
             <h3><a href="{% url 'product_info' product.id %}">{{product.name}}</a></h3>
             <p>{{product.category}}</p>
