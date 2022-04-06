@@ -1,3 +1,6 @@
+
+
+
 #page-container {
     position: relative;
     min-height: 100vh;
@@ -32,7 +35,11 @@
     color: #66023C !important;
 }
 
-h1,
+h1 {
+    font-family: 'Cairo', sans-serif;
+    font-size: smaller;
+}
+
 .purple-text {
     color: #66023C;
 }
@@ -40,6 +47,7 @@ h1,
 #main-container {
     padding-bottom: 4rem;
     padding-top: 5rem;
+    background-color: aliceblue;
 }
 
 #main-footer {

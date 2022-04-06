@@ -11,11 +11,15 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <!-- Custom CSS-->
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
-        <!-- favicon links -->
+        <!-- Favicon links -->
         <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/apple-touch-icon.png' %}">
         <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon-32x32.png' %}">
         <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon-16x16.png' %}">
         <link rel="manifest" href="{% static 'images/site.webmanifest' %}">
+        <!--Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400&family=Cairo:wght@300;500&family=Fira+Sans:wght@200;300&display=swap" rel="stylesheet">
         {% block extra_css %}{% endblock %}
     <title>1001 Souks {% block extra_title %}{% endblock %}</title>
     </head>
