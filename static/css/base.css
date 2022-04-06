@@ -32,7 +32,8 @@
     color: #66023C !important;
 }
 
-h1 {
+h1,
+.purple-text {
     color: #66023C;
 }
 

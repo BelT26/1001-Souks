@@ -3,11 +3,11 @@
 
 {% block extra_css %}
 <!-- link to custom css file -->
-<link rel="stylesheet" href="{% static 'css/index.css' %}">
+<link rel="stylesheet" href="{% static 'home/css/index.css' %}">
 {% endblock %}
 
 {% block content %}
-    <div class="container-fluid my-5" id="hero-img-container">
+    <div class="container-fluid mb-3" id="hero-img-container">
         <div class="row">
             <div class="col" id="main-header-container">
                 <h1 class="display-3 text-light">1001 Souks</h1>
@@ -16,14 +16,16 @@
         </div>
     </div>
     <div class="container" id="about-container">
-        <div class="row">
+        <div class="row mb-2">
             <div class="col">
-                <h2 class="text-center">Intro Header</h2>
+                <h2 class="text-center purple-text">Intro Header</h2>
             </div>            
         </div>
-        <div class="row">
-            <div class="col-md-6 col-lg-4" id="about-img"></div>
-            <div class="col-md-6 col-lg-8" id="intro-text">
+        <div class="row" id="about-content-container" class="d-flex justify-content-between">
+            <div class="col-md-6 col-lg-5" id="about-img">
+                <img src="{% static 'home/images/cat-narrow.jpg' %}" />
+            </div>
+            <div class="col-md-6 col-lg-7" id="intro-text">
                 <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam reiciendis doloribus mollitia placeat quia! Reiciendis velit, vero, deserunt eveniet expedita saepe hic placeat et, eligendi harum tenetur alias eum ipsa?</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique perferendis vero iusto, quasi animi illo recusandae repellat quae placeat asperiores, ex dolorum unde quam, distinctio dolor deleniti beatae quod possimus molestiae mollitia adipisci earum. Vero, neque distinctio. Labore quo facere ducimus est tempore doloribus explicabo, quidem officia voluptatum veniam iste, accusantium sit nihil ut. Debitis recusandae itaque ad et, omnis magni quae molestias. Qui adipisci atque, fuga, tempora nesciunt corporis distinctio laborum vero delectus, maxime nobis commodi excepturi perspiciatis ea. Maiores natus, saepe, adipisci neque repellendus blanditiis, quos eaque nesciunt aspernatur laborum quia. Explicabo ea possimus quia cum expedita modi!</p>
             </div>
