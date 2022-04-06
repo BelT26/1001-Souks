@@ -3,7 +3,11 @@
     min-height: 100vh;
     padding: 0;
     margin: 0;
-  }
+}
+
+#header-container {
+    background-color: #EDC54D;
+}
 
 #main-nav {
     background-color: #EDC54D;
