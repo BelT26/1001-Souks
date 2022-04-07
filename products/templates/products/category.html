@@ -25,14 +25,16 @@
         {% endfor %}        
     </div>
     <hr>
-    <div class="products-container my-5">
+    <div class="products-container container my-5">
         {% for product in products %}
-        <div class="item-container container-fluid">
-            <img src="{{product.image.url}}" width="200">
-            <h3><a href="{% url 'product_info' product.id %}">{{product.name}}</a></h3>
-            <p>{{product.category}}</p>
-            <p>£ {{product.price}}</p>
-        </div>
+        <div class="card mx-5 my-2 p-2 shadow" style="width: 16rem;">
+            <img class="card-img-top" src="{{product.image.url}}" alt="Card image cap">
+            <div class="card-body"> 
+                <h5 class="card-title">{{product.name}}</h5>                
+                <p class="card-text item-price">£ {{product.price}}</p>
+                <a href="{% url 'product_info' product.id %}" class="btn btn-primary">View details</a>
+            </div>
+        </div>    
         {% endfor %}
     </div>
 {% endblock %}
