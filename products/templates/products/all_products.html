@@ -7,15 +7,24 @@
 {% endblock %}
 
 {% block content %}
-    <div class="heading-container">
-        <h2 class="display-3 my-5">All Products</h2>
+    <div class="heading-container text-center">
+        <h1 class="display-3 my-4">All Products</h2>
     </div>
-    <div class="products-container">
+    <div class="container products-container d-flex">
         {% for product in products %}
-        <img src="{{product.image.url}}" width="200">
-        <h3><a href="{% url 'product_info' product.id %}">{{product.name}}</a></h3>
+        <div class="card mx-5 my-2 p-2 shadow" style="width: 16rem;">
+            <img class="card-img-top" src="{{product.image.url}}" alt="Card image cap">
+            <div class="card-body"> 
+                <h5 class="card-title">{{product.name}}</h5>
+                <p class="card-text card-category">{{product.category}}</p>                
+                <p class="card-text item-price">£ {{product.price}}</p>
+                <a href="{% url 'product_info' product.id %}" class="btn btn-primary">View details</a>
+            </div>
+        </div>
+        <!-- <img src="{{product.image.url}}" width="200">
+        <h3><a href="">{{product.name}}</a></h3>
         <p>{{product.category}}</p>
-        <p>£ {{product.price}}</p>
+        <p>£ {{product.price}}</p> -->
         {% endfor %}
     </div>    
 {% endblock %}

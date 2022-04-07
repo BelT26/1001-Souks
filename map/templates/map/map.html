@@ -3,12 +3,12 @@
 
 {% block extra_css %}
 <!-- link to custom css file -->
-<link rel="stylesheet" href="{% static 'css/map.css' %}">
+<link rel="stylesheet" href="{% static 'map/css/map.css' %}">
 {% endblock %}
 
 {% block content %}
 <div class="container-fluid" id="location-page-container">
-    <h1 class="display-4">Locations</h1>
+    <h1 class="display-3 my-4" id="map-heading">Locations</h1>
     <div id="map-container"></div> 
 </div>
     
