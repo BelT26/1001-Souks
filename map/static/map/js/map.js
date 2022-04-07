@@ -9,4 +9,29 @@ function initMap() {
             lng: -8.003742649163959,
         }
     });
+
+    
+// co-ordinates of each of the featured cities
+    var locations = [
+        { 
+            name: 'Marrakesh',
+            coords:  { lat: 31.63, lng: -7.98 }
+         },
+         {
+             name: 'Essaouira',
+             coords: { lat: 31.51, lng: -9.76 },
+         }        
+    ];
+
+// maps markers to co-ordinates in the locations array    
+    var markers = locations.map(function(location, i) {
+        return new google.maps.Marker({
+            position: location.coords,
+            label: '*'
+        });
+    });
+
+    var markerCluster = new MarkerClusterer(map, markers, { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' });
 }
+
+

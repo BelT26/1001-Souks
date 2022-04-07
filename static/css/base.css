@@ -12,12 +12,16 @@
 #main-nav {
     background-color: #EDC54D;
     padding: 0.7rem;
-    height: 5rem;
+    height: 5.5rem;
 }
 
-.navbar-light .navbar-nav .nav-link {
+.navbar-nav .nav-link {
     color: #66023C !important;
     font-size: larger;
+}
+
+.nav-link:hover {
+    color: #a45f87 !important;
 }
 
 #search-dropdown {
@@ -42,7 +46,7 @@ h1,
 }
 
 #main-container {
-    padding-top: 5rem;
+    padding-top: 5.5rem;
     padding-bottom: 5rem;
     min-height: 100vh;
     background-color: rgb(242, 249, 255);
@@ -56,10 +60,16 @@ h1,
     left: 0;
     bottom: 0;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
+
 #main-footer h4 {
-    color:#66023C
+    color:#66023C;
+    font-family: 'Cairo', sans-serif;
 }
 
 #main-footer li {
