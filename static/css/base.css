@@ -36,7 +36,8 @@
     color: #66023C !important;
 }
 
-h1 {
+h1,
+.cairo {
     font-family: 'Cairo', sans-serif;
 }
 

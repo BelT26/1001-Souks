@@ -32,7 +32,16 @@
             <div class="card-body"> 
                 <h5 class="card-title">{{product.name}}</h5>                
                 <p class="card-text item-price">£ {{product.price}}</p>
-                <a href="{% url 'product_info' product.id %}" class="btn btn-primary">View details</a>
+                {% if product.maker %}
+                <p class="card-text item-maker">{{product.maker}}</p>
+                {% endif %}
+                {% if product.colour_selection %}
+                <p class="card-text item-colour">Colours</p>
+                {% endif %}
+                {% if product.size_selection %}
+                <p class="card-text item-colour">Sizes</p>
+                {% endif %}
+                <a href="{% url 'product_info' product.id %}" class="btn custom-button">View details</a>
             </div>
         </div>    
         {% endfor %}

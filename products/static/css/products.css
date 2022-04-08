@@ -1,16 +1,13 @@
-.custom-button:active,
-.custom-button:hover {
-    background-color: rgba(67, 67, 235, 0.726);
-}
-
-.button-text {
+.custom-button {
+    background-color: #66023C;
     color: white;
     text-decoration: none;
 }
 
-.button-text:active,
-.button-text:hover {
-    color: orange;
+.custom-button:active,
+.custom-button:hover {
+    background-color: #560434;
+    color: #EDC54D;
     text-decoration: none;
 }
 
@@ -18,4 +15,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.product-detail-img {
+    width: 300px;
+    height: fit-content;
 }
