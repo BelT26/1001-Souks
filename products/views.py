@@ -29,34 +29,23 @@ def all_products(request):
             if not query:
                 messages.error(request, "Please enter a search query")
                 return redirect(reverse('products'))
-            
+
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
-            
+
     context = {
         'products': products,
         'query': query,
-        
+
     }
     return render(request, 'products/all_products.html', context)
 
 
 def product_info(request, product_id):
-    """returns a page with more detailed information about the selected product"""
+    """returns a page with more detailed information about the
+    selected product"""
     selected_product = get_object_or_404(Product, pk=product_id)
     context = {
         'product': selected_product,
     }
     return render(request, 'products/product.html', context)
-
-
-# def category(request, category_name):
-#     """returns a page with information about a selected category and the
-#     related products"""
-#     selected_category = get_object_or_404(Category, name=category_name)
-#     context = {
-#         'category': selected_category
-#     }
-#     return render(request, 'products/category.html', context)
-
-
