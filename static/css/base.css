@@ -92,3 +92,16 @@ h1,
 #main-footer i:hover {
     color:#2978D6;
 }
+
+.custom-button {
+    background-color: #66023C;
+    color: white;
+    text-decoration: none;
+}
+
+.custom-button:active,
+.custom-button:hover {
+    background-color: #560434;
+    color: #EDC54D;
+    text-decoration: none;
+}
