@@ -2,26 +2,25 @@
 
 ![Responsive preview of 1001 Moroccan Souks]()
 
-## **Project Goal** 
-The project was created for Jo, a friend of mine with a real passion for Morocco.  Jo has a property in Marrakesh and through her frequent trips there has got to know many local craftsmen.  She was so impressed by their work that she has decided to set up a business importing their products to the UK and this website is intended to launch her new venture
-
-## Table of contents 
-* [UX](#ux)
-    * [Planning](#planning)
-    * [User Stories](#user-stories)
-    * [User Requirements and Expectations](#user-requirements-and-expectations)
-        * [Requirements](#requirements)
-        * [Expectations](#expectations)
-    * [Design](#design-choices)
-        * [Fonts](#fonts)
-        * [Colors](#colors)    
-* [Wireframes and Flowcharts](#wireframes-and-flowcharts)
+## Table of Contents 
+* [Overview]
+* [Planning](#planning)
     * [Wireframes](#wireframes)
-    * [Flowcharts](#flowcharts)
     * [Database Structure](#database-structure)
+    * [Agile Tools](#agile-tools)
+        * [Epics](#epics)
+        * [User Stories](#user-stories)
+        * [Tasks](#tasks)   
+* [Design](#design)
+    * [Fonts](#fonts)
+    * [Colors](#colors)
+    * [Logo](#logo)  
 * [Features](#features)
-    * [Existing Features](#existing-features)
-    * [Features to be implemented](#features-to-be-implemented)
+    * [Messages](#messages)
+    * [Navbar](#navbar)
+    * [Footer](#footer)
+* [User Authentication](#user-authentication)
+
 * [Search Enine Optimization](#search-engine-optimization)
 * [Social Media Marketing](#social-media-marketing)
 * [Technologies used](#technologies-used)
@@ -37,76 +36,27 @@ The project was created for Jo, a friend of mine with a real passion for Morocco
 
 --- 
 
-<a name="ux"></a>
+## **Overview** 
+The project was created for Jo, a friend of mine with a real passion for Morocco.  Jo has a property in Marrakesh and through her frequent trips there has got to know many local craftsmen.  She was so impressed by their work that she has decided to set up a business importing their products to the UK and this website is intended to launch her new venture.
 
-## **UX**
+## **Planning**
 
-<a></a>
+### **Wireframes**
+I used [Balsamiq](https://balsamiq.com/wireframes/) to create wireframes for my website.   
+[Home page](wireframes/home.png)  
+[Category](wireframes/category.png)  
+[All Products](wireframes/all_products.png)  
+[Map](wireframes/map.png)  
+[Contact Form](wireframes/contact.png)  
 
-### **User Goals**
+### **Database Structure**
 
-* The landing page should create an instant good feeling, motivating the user to look at the rest the of site.
-* The website has to work well on all kind of devices like mobile phones, tables and desktops.
-* Ability to see the various rooms that the accommodation offers.
-* Have some information about the surroundings of the accommodation like restaurants, places to visit etc.
-* Be able to make a reservation online
-* Visually appealing website
-
-[Back to Top](#table-of-contents)
-
-<a></a>
+I created ___ models for this project.  The relationship between the models can be seen in the table below. 
 
 ### **User Stories**
 
-As a user:  
-* I want the website to be visually appealing so I can already imagine myself being on holiday there.
-* I want to have some information about the property and it's location.
-* I want to have an intuitive navigation so I know right away where I can find which information.
-* I want to see which different rooms the accommodation has to offer.
-* I want to know what kind of amenities are included in the room.
-* I want to see a lot of pictures so I can really visualise the place.
-* I want to be able to make a reservation on the website itself.
-* I want to be able to choose the exact room in which I want to stay.
-* I want to have some information about the surroundings of the accommodation.
-* I want to be able to get in contact with the property in case I have some questions.
-* I want to know the address and how far / close it is to big cities.
-
-### **Site owners Goals**
-
-As an owner:  
-* I want to promote my property the best way possible to attract new customers.
-* I want to increase direct bookings by making the booking process easy and intuitive.
-* I want to be able to see all the reservations.
-* I want to have a separate section for arriving and inhouse reservations.
-* I want to have a separate section as well for the reservations for the next 7 days so I can plan in advance.
-* I want to be able to update the rooms easily in case I make some improvements to the room.
-* I want to be able to add some rooms in case I decide to expand the accommodation.
-* I want to be able to easily add some news places to visit, eat so the information stays accurate and up-to-date.
-
-<a></a>
-
-
-[Back to Top](#table-of-contents)
-
-<a></a>
-
-### **User Requirements and Expectations**
-
-<a></a>
-
-#### Requirements
-
-* Easy to navigate by having a responsive navigation bar and various links to other pages throughout the site.
-* Appealing landing page creating a warm feeling towards the place.
-* Easy to find the various rooms and its amenities.
-* Possibility to make a reservation.
-* Find information about the environment, things to do, eat, see etc.
-* Contact information like email, phone and address.
-* Many images to be able to visualise how my holiday would look like.
-
 
 ### **Design**
-
 
 #### Colors
 
@@ -121,37 +71,71 @@ The fonts for the website were sourced from google fonts [Google Fonts](https://
 Cairo is used for the main headings and Alegreya Sans is used for the remaining text.
 
 
-### Structure
 
-
-
-## **Wireframes and Flowcharts**
-
-### **Wireframes**
-I used [Balsamiq](https://balsamiq.com/wireframes/) to create wireframes for my website.   
-[Home page](wireframes/home.png)  
-[Category](wireframes/category.png)  
-[All Products](wireframes/all_products.png)  
-[Map](wireframes/map.png)  
-[Contact Form](wireframes/contact.png)  
-
-### **Database Structure**
-
-I created ___ models for this project.  The relationship between the models can be seen in the table below. 
 
 
 ## **Features**
+
+## User Authentication
+Django Allauth was installed to enable users to sign up, log in and log out.  I customised the standard Allauth model  
+so that users also need to enter their first and last name when signing up.  I copied the Allauth templates into a separate folder and used my own base.html file to extend them.  I also created a custom container for them so that they took up all the space on the screen that was not occupied by the header or footer.
+
+![Sign Up Form]()
+
+## Messages
+Feedback on user interaction is provided via Django messages.  Bootstrap classes have been applied to convey success or error messages.  The code to install and customise the messages was taken from the 'I think therefore I blog' walkthrough project. To improve the user experience, the messages automatically disappear after several seconds without the user needing to manually dismiss them.
+![Message Example]()
 
 ### Navbar
 The navbar was created using a Bootstrap template and modifed to fit the site requirement.  It is split into 3 sections:
 The left section contains the site logo
 The middle section incorporates the main navigation links and includes a dropdown menu which a user can use to navigate to a product category and a dropdown search bar that in which the user can look for specific items.
 The right side shows whether the user is logged in, provided a link to their basket and offers them the possibility to log in or sign up if they are logged out.
+![Navbar]()
+
+## Footer
+The contact email address is on the left side of the footer and allows users to get in touch with any queries. The email address opens up a link to the user's email account with a prepopulated 'to' field.
+The right side of the footer contains social media links to Facebook and Instagram. The icons change from purple to blue when the user hovers over them to indicate to the user that they are links. 
+
+![Footer]()
+
+### Home Page
+At the top of the home page there is a hero image of some shops selling a variety of traditionsl Moroccan sandals and shoes.  This photograph was taken on a recent trip to Marrakech by my friend Jo.
+![Hero Img]()
+
+Below the main image is a section featuring a carousel of images from Moroccan souks that provides the user with some background information on both the business and traditional Moroccan crafts.
+
+![Intro]()
 
 
+### Map
+The map provides the user with some information about the locations in Morocco that are famous for the production of certain crafts.  A popover appears when the user hovers on the location with a description and a photograph.  A link in the description takes the user to a page with more information about the location and a list of the available products that are made there. 
 
+I used the Bootstrap Resume walkthrough project as a guide to creating the JavaScript code to link to the Google Maps API.  Although they are not currently necessary  I decided to use marker clusters as the site owner mentioned  that they would like to add other locations to the map in the future. An asterisk was used inside the marker so that it resembled the Moroccan flag which is a star on a red background.
 
+![Map]()
 
+### Location Page
+The location page is accessed from the links on the map page and is split into two sections.  The top section includes an image of the feature town with a description to the side.
+
+Below are a list of products that the user can buy that are made in the selected town.
+
+![Location Page]()
+
+### Category Page
+The category page follows a similar structure to the Location Page.  The top section contains an image representing the selected category alongside information about the history and traditions of the craft.
+
+Underneath, all the products available in that category are listed.
+
+### All Products Page
+The All Products Page displays all of the products on sale. By default they are sorted by price.
+
+### Product Info Page
+
+### Contact Form
+This form is intended for users who wish to send a more detailed query to the site owner.
+
+## Admin Features
 
 ## **Technologies used**
 
@@ -388,3 +372,9 @@ This set up will allow your site to use Postgres in deployment and sqlite3 in de
 
 
 ## **Credits**
+The logo and text for the site were provided by Jo Jarvis
+
+
+
+### Future Development Possibilities
+Give customers the possibility to add ratings
