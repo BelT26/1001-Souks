@@ -19,14 +19,22 @@
     * [Messages](#messages)
     * [Navbar](#navbar)
     * [Footer](#footer)
+    * [Home Page](#home-page)
+    * [Map](#map)
+    * [Location Page](#location-page)
+    * [Category Page](#category-page)
+    * [All Products](#all-products)
+    * [Product Info](#product-info)
+    * [Checkout](#checkout)
+    * [Product Admin](#product-admin)
 * [User Authentication](#user-authentication)
-
+    * [User Profiles](#user-profiles)
 * [Search Enine Optimization](#search-engine-optimization)
 * [Social Media Marketing](#social-media-marketing)
 * [Technologies used](#technologies-used)
     * [Languages](#languages)
     * [Libraries and Frameworks](#libraries-and-frameworks)
-    * [Tools](#tools)
+    * [Other Tools](#other-tools)
 * [Testing](#testing)
 * [Bugs](#bugs)
 * [Deployment](#deployment)
@@ -56,23 +64,19 @@ I created ___ models for this project.  The relationship between the models can 
 ### **User Stories**
 
 
-### **Design**
+## **Design**
 
-#### Colors
+### **Colors**
 
 Morocco is famous for it's bold bright colours.  The original idea was to use a green font on a yellow background however the text was not easy to read and did not pass the accessibility tests on the contrast checker.  Jo suggested using Tyrian Purple, which as well as providing a great contrast against the yellow also incorporates some local culture as it is one of the Moroccan natural dyes, used in the past for the robes of Roman emperors, and is made from the shells of murex snails found off the coast of Essaouira (the purple islands).
 
-### Logo
-The logo was designed by my friend Jo.
 
-
-#### Fonts
+### **Fonts**
 The fonts for the website were sourced from google fonts [Google Fonts](https://fonts.google.com/ "Google Fonts") 
 Cairo is used for the main headings and Alegreya Sans is used for the remaining text.
 
-
-
-
+### **Logo**
+The logo was designed by my friend Jo.
 
 ## **Features**
 
@@ -87,8 +91,8 @@ Feedback on user interaction is provided via Django messages.  Bootstrap classes
 ![Message Example]()
 
 ### Navbar
-The navbar was created using a Bootstrap template and modifed to fit the site requirement.  It is split into 3 sections:
-The left section contains the site logo
+The navbar was created using a Bootstrap template and modifed to fit the site requirements.  It is split into 3 sections:
+The left section contains the site logo.
 The middle section incorporates the main navigation links and includes a dropdown menu which a user can use to navigate to a product category and a dropdown search bar that in which the user can look for specific items.
 The right side shows whether the user is logged in, provided a link to their basket and offers them the possibility to log in or sign up if they are logged out.
 ![Navbar]()
@@ -105,7 +109,7 @@ At the top of the home page there is a hero image of some shops selling a variet
 
 Below the main image is a section featuring a carousel of images from Moroccan souks that provides the user with some background information on both the business and traditional Moroccan crafts.
 
-![Intro]()
+![About]()
 
 
 ### Map
@@ -149,18 +153,20 @@ JavaScript
 Django
 Bootstrap
 
-### **Planning Tools**
+### **Other Tools**
+
+#### **Planning**
 GitHub projects
 Balsamiq wireframes
 Excel
 
-### **Payments""
+#### **Payments""
 Stripe
 
-### **File Hosting**
+#### **File Hosting**
 Amazon Web Service
 
-### **Deployment**
+#### **Deployment**
 Github
 Heroku
 

@@ -18,10 +18,10 @@ def add_to_basket(request, item_id):
 
     if colour:
         if item_id in list(basket.keys()):
-            if colour in basket[item_id]['items_by_colour'].keys():
+            if colour in list(basket[item_id]['items_by_colour'].keys()):
                 basket[item_id]['items_by_colour'][colour] += quantity
             else:
-                basket[item_id]['items_by_colour'][basket] = quantity
+                basket[item_id]['items_by_colour'][colour] = quantity
         else:
             basket[item_id] = {'items_by_colour': {colour: quantity}}
     else:

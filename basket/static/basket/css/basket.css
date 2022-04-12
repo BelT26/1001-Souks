@@ -1,0 +1,10 @@
+.amend-basket a {
+    color: #2978D6 !important; 
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.amend-basket a:hover,
+.amend-basket a:active {
+    color: #1B841B !important; 
+}

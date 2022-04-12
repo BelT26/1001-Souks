@@ -32,7 +32,7 @@ class Product(models.Model):
                                      default='')
     category = models.ForeignKey(Category, null=True, blank=True,
                                  on_delete=models.SET_NULL)
-    sku = models.CharField(max_length=200, null=True, blank=True)
+    sku = models.CharField(max_length=200, null=False, blank=False)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     rating = models.DecimalField(max_digits=2, decimal_places=1, null=True,
@@ -44,6 +44,10 @@ class Product(models.Model):
     size_selection = models.BooleanField(default=False, null=True, blank=True)
     colour_selection = models.BooleanField(default=False, null=True,
                                            blank=True)
+    colour1 = models.CharField(max_length=200, null=True, blank=True)
+    colour2 = models.CharField(max_length=200, null=True, blank=True)
+    colour3 = models.CharField(max_length=200, null=True, blank=True)
+    colour4 = models.CharField(max_length=200, null=True, blank=True)
     maker = models.CharField(max_length=200, blank=True, null=True)
     city = models.ForeignKey(City, null=True, blank=True,
                              on_delete=models.SET_NULL)

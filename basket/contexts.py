@@ -20,17 +20,20 @@ def basket_contents(request):
                 'item_id': item_id,
                 'quantity': item_data,
                 'product': product,
-            })
+            })       
+
         else:
             product = get_object_or_404(Product, pk=item_id)
             for colour, quantity in item_data['items_by_colour'].items():
                 total += quantity * product.price
+                subtotal = quantity * product.price
                 product_count += quantity
                 basket_items.append({
                     'item_id': item_id,
-                    'quantity': item_data,
+                    'quantity': quantity,
                     'product': product,
                     'colour': colour,
+                    'subtotal': subtotal,
                 })
 
     context = {
@@ -41,7 +44,7 @@ def basket_contents(request):
 
     return context
 
-
+    
 # def basket_contents(request):
 #     """"makes basket accessible across all apps"""
 #     basket_items = []

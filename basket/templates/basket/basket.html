@@ -19,35 +19,57 @@
             <table class="table table-sm table-borderless">
                 <thead>
                     <tr>
-                        <th scope="col">Product Info</th>
+                        <th scope="col" class="table-heading-purple">Product Info</th>
                         <th scope="col"></th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Quantity</th>
-                        <th scope="col">Subtotal</th>
+                        <th scope="col" class="table-heading-purple">Product Colour</th>
+                        <th scope="col" class="table-heading-purple">Price</th>
+                        <th scope="col" class="table-heading-purple">Quantity</th>
+                        <th scope="col" class="table-heading-purple">Subtotal</th>
                     </tr>
                 </thead>
-                {% for item in basket_items %}
+                {% for item in basket_items %}                   
                     <tr>
                         <td class="p-3 w-25">
                             <img class="img-fluid rounded" src="{{ item.product.image.url }}">
                         </td>
                         <td class="py-3">
-                            <p class="my-0">{{ item.product.name }}</p>                            
+                            <p class="my-0">{{ item.product.name }}</p>                                                      
                         </td>
+                        {% if item.colour %}
                         <td class="py-3">
-                            <p class="my-0">${{ item.product.price }}</p>
+                            <p class="my-0">{{ item.colour }}</p> 
+                        </td>
+                        {% else %}
+                        <td class="py-3">
+                            <p class="my-0">N/A</p> 
+                        </td>
+                        {% endif %}
+                        <td class="py-3">
+                            <p class="my-0">£ {{ item.product.price }}</p>
                         </td>
                         <td class="py-3 w-25">
-                            <p class="my-0">{{ item.quantity }}</p>
+                            <form method="POST" action="#">
+                                {% csrf_token %}
+                                <div class="col-12">
+                                    <div class="form-group w-50">                                                      
+                                            <input class="form-control qty_input" type="number" name="quantity" 
+                                            value="{{item.quantity}}" min="1" max="99" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">                          
+                                    </div>
+                                </div> 
+                            </form>
+                            <div class="d-flex justify-content-around w-50">
+                                <a class="update-link" href="#">Update</a>
+                                <a class="remove-item" href="#" id="remove_{{ item.item_id }}" data-colour="{{ item.colour }}">Remove</a>
+                            </div>                            
                         </td>
                         <td class="py-3">
-                            <p class="my-0">${{ item.product.price }}</p>
+                            <p class="my-0">£ {{ item.subtotal|floatformat:2 }}</p>
                         </td>
-                    </tr>
+                    </tr>                                
                 {% endfor %}
                 <tr>
                     <td colspan="5" class="pt-5 text-right">
-                        <h6><strong>Grand Total: £{{ total|floatformat:2 }}</strong></h6>                        
+                        <h6 class="table-heading-purple"><strong>Total: £ {{ total|floatformat:2 }}</strong></h6>                        
                     </td>
                 </tr>                
             </table>
@@ -81,4 +103,8 @@
     </div>
     </div>
 </div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'basket/js/basket.js' %}"></script>
 {% endblock %}

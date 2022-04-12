@@ -58,23 +58,30 @@ h1,
 }
 
 #main-footer {
-    background-color: #EDC54D ;
+    background-color: #EDC54D;
     padding: 1rem;
+    margin: 0;
     height: 5rem;
-    position: absolute;
+    position: relative;  
     left: 0;
     bottom: 0;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
 }
 
 
-#main-footer h4 {
+#main-footer a {
     color:#66023C;
+    text-decoration: none;
     font-family: 'Cairo', sans-serif;
+}
+
+#main-footer a:hover,
+#main-footer a:active {
+    color: #2978D6;
+    text-decoration: none;
 }
 
 #main-footer li {
@@ -104,4 +111,18 @@ h1,
     background-color: #560434;
     color: #EDC54D;
     text-decoration: none;
+}
+
+.table-heading-purple {
+    font-size: 1.25rem;
+    color: #66023C !important;
+}
+
+.amend-basket a {
+    color: #2978D6 !important; 
+}
+
+.amend-basket a:hover,
+.amend-basket a:active {
+    color: #1B841B !important; 
 }

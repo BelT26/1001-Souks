@@ -21,3 +21,8 @@
     width: 300px;
     height: fit-content;
 }
+
+.quantity-btn {
+    font-size: 1.5rem !important;
+    font-weight: 200 !important;
+}
