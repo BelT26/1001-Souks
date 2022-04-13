@@ -6,7 +6,7 @@ from .models import Product, Category
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
     """determines how category details are displayed in the admin panel"""
-    list_display = ('name', 'location')
+    list_display = ('name',)
 
     ordering_by = ('name',)
 
@@ -18,4 +18,4 @@ class ProductAdmin(admin.ModelAdmin):
     list_display = ('name', 'category', 'price', 'rating')
     search_fields = ['name', 'category']
 
-    ordering = ('price',)
+    ordering_by = ('price',)
