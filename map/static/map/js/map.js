@@ -1,37 +1,72 @@
-//The below code is based on the map section in the Bootstrap resume walkthrough project
+// //The below code is adapted from the Google maps documentation
 
-// Creates a new google map and sets the zoom and central location
 function initMap() {
-    var map = new google.maps.Map(document.getElementById("map-container"), {
-        zoom: 7,
-        center: {
-            lat: 31.66903100668774, 
-            lng: -8.003742649163959,
-        }
+    const center = { lat: 31.67, lng: -8.01 };
+    const map = new google.maps.Map(document.getElementById("map-container"), {
+      zoom: 7,
+      center: center,
     });
-
-    
-// co-ordinates of each of the featured cities
-    var locations = [
+    const locations = [
         { 
-            name: 'Marrakesh',
-            coords:  { lat: 31.63, lng: -7.98 }
-         },
-         {
-             name: 'Essaouira',
-             coords: { lat: 31.51, lng: -9.76 },
-         }        
-    ];
+            name: 'Marrakech',
+            coords:  { lat: 31.63, lng: -7.98 },
+            contentString: '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h1 class="map-heading">Marrakech</h1>' +
+            '<div id="bodyContent">' +
+            "<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large " +
+            "sandstone rock formation in the southern part of the " +
+            "Northern Territory, central Australia." +
+            '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">' +
+            "https://en.wikipedia.org/w/index.php?title=Uluru</a> " +
+            "(last visited June 22, 2009).</p>" +
+            "</div>" +
+            "</div>"
+            },
+        {
+            name: 'Essaouira',
+            coords: { lat: 31.51, lng: -9.76 },
+            contentString: '<div id="content">' +
+            '<div id="siteNotice">' +
+            "</div>" +
+            '<h1 class="map-heading">Essaouira</h1>' +
+            '<div id="bodyContent">' +
+            "<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large " +
+            "sandstone rock formation in the southern part of the " +
+            "Northern Territory, central Australia." +
+            '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">' +
+            "https://en.wikipedia.org/w/index.php?title=Uluru</a> " +
+            "(last visited June 22, 2009).</p>" +
+            "</div>" +
+            "</div>"
+        }        
+    ];    
+ 
 
-// maps markers to co-ordinates in the locations array    
-    var markers = locations.map(function(location, i) {
+    // maps markers to co-ordinates in the locations array and
+    // adds an info window   
+    const markers = locations.map(function(location, i) {
         return new google.maps.Marker({
             position: location.coords,
-            label: '*'
+            label: '*',
+            map,
+            title: location.name,
+            infoWindow: new google.maps.InfoWindow({
+                content: location.contentString,
+                maxWidth: 320,
+            })
         });
     });
-
-    var markerCluster = new MarkerClusterer(map, markers, { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' });
-}
-
-
+    
+    for(let marker of markers) {
+        marker.addListener("click", () => {
+            marker.infoWindow.open({
+              anchor: marker,
+              map,
+              shouldFocus: false,
+            });
+          });
+        }
+    }
+    

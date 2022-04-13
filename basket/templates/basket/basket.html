@@ -48,19 +48,23 @@
                             <p class="my-0">£ {{ item.product.price }}</p>
                         </td>
                         <td class="py-3 w-25">
-                            <form method="POST" action="#">
+                            <form method="POST" class="form update-form" action="{% url 'adjust_basket' item.item_id %}">
                                 {% csrf_token %}
                                 <div class="col-12">
                                     <div class="form-group w-50">                                                      
                                             <input class="form-control qty_input" type="number" name="quantity" 
-                                            value="{{item.quantity}}" min="1" max="99" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">                          
+                                            value="{{item.quantity}}" min="1" max="99" 
+                                            data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                                            {% if item.product.colour_selection %}
+                                                <input type="hidden" name="product_colour" value="{{ item.colour }}">
+                                            {% endif %}                       
                                     </div>
-                                </div> 
+                                </div>
                             </form>
                             <div class="d-flex justify-content-around w-50">
-                                <a class="update-link" href="#">Update</a>
-                                <a class="remove-item" href="#" id="remove_{{ item.item_id }}" data-colour="{{ item.colour }}">Remove</a>
-                            </div>                            
+                                <a class="update-link">Update</a>
+                                <a class="remove-item" id="remove_{{ item.item_id }}" data-product_colour="{{ item.colour }}">Remove</a>
+                            </div>                         
                         </td>
                         <td class="py-3">
                             <p class="my-0">£ {{ item.subtotal|floatformat:2 }}</p>
@@ -106,5 +110,28 @@
 {% endblock %}
 
 {% block extra_js %}
-<script src="{% static 'basket/js/basket.js' %}"></script>
+<script type="text/javascript">
+    // The below code is taken from the Boutique Ado walkthrough
+
+    // Update quantity on click
+    $('.update-link').click(function(e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
+
+    // Remove item and reload on click
+    $('.remove-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var colour = $(this).data('product_colour');
+        var url = `/basket/remove/${itemId}`;
+        var data = {'csrfmiddlewaretoken': csrfToken, 'product_colour': colour};
+
+        $.post(url, data)
+            .done(function() {
+                location.reload();
+            });
+    })
+
+</script>
 {% endblock %}

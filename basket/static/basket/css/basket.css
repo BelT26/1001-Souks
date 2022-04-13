@@ -1,10 +1,13 @@
-.amend-basket a {
+.remove-item,
+.update-link {
     color: #2978D6 !important; 
     cursor: pointer;
     text-decoration: none;
 }
 
-.amend-basket a:hover,
-.amend-basket a:active {
+.remove-item:hover,
+.remove-item:active,
+.update-link:hover,
+.update-link:active {
     color: #1B841B !important; 
 }
