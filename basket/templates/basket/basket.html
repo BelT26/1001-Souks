@@ -114,8 +114,9 @@
     // The below code is taken from the Boutique Ado walkthrough
 
     // Update quantity on click
+    
     $('.update-link').click(function(e) {
-        var form = $(this).prev('.update-form');
+        var form = $(this).parent().prev('.update-form');
         form.submit();
     })
 

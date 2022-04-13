@@ -174,7 +174,7 @@ Heroku
 
 
 ## Bugs
-
+Adjust basket call was not functioning.  Issue with the JQuery selector. Consulted Jquery documentation and realised that 'prev' in the JQuery selector referred to the next sibling.  As I had added a div to adjust the layout of the links the form was no longer a sibling of the anchor elements.  To correct this I went up one level by adding a .parent() selector before .prev().
 
 ## **Deployment**
 

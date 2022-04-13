@@ -118,11 +118,28 @@ h1,
     color: #66023C !important;
 }
 
-.amend-basket a {
-    color: #2978D6 !important; 
+/* Bootstrap Toasts */
+
+.message-container {
+    position: fixed;
+    top: 90px;
+    right: 15px;
+    z-index: 9;
+    border:#66023C;
+    padding: 10px;
 }
 
-.amend-basket a:hover,
-.amend-basket a:active {
-    color: #1B841B !important; 
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-button {
+    background-color: rgb(207, 232, 254);    
+}
+
+.toast-button:hover,
+.toast-button:active {
+    background-color: rgb(180, 220, 254); 
+    border:#66023C;
+    color:#66023C;   
 }
