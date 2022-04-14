@@ -1,6 +1,15 @@
+# from Boutique Ado project
 from django.apps import AppConfig
 
 
 class CheckoutConfig(AppConfig):
-    default_auto_field = 'django.db.models.BigAutoField'
+    """
+    alerts Django to new signals file
+    """
     name = 'checkout'
+
+    def ready(self):
+        """
+        imports signals file
+        """
+        import checkout.signals
