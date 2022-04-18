@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<!-- link to custom css file -->
+<link rel="stylesheet" href="{% static 'css/products.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="heading-container">
+        <div class="row w-100">
+            <div class="col">
+                <h1 class="display-3 mt-2 text-center purple-text">{{city.name}}</h1>
+            </div>            
+        </div>
+        <div class="row mt-3 px-3">
+            <div class="col-lg-6 category-img-container">
+                <img src="{{city.image.url}}" width="600">
+            </div>
+            <div class="col-lg-6">
+                <p class="lead">{{city.description}}</h2>
+            </div>
+        </div>     
+    </div>
+    <hr>    
+    <div class="maker-container container my-5">
+        <div class="row">
+            <h2 class="cairo purple-text">Maker Name</h2>
+        </div>
+        <div class="row">
+            <div class="col col-lg-8 maker-img">
+                <img src="#"/>
+            </div>
+            <div class="col col-md-4 maker-info">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, facilis officia! Maxime quasi provident qui, placeat et dolores perferendis dolore perspiciatis eveniet tempora, 
+                    sequi nulla quaerat veritatis itaque illo. Eaque ducimus ipsam, laudantium nesciunt voluptatibus iusto. Aliquid, nostrum expedita molestias mollitia beatae nemo reprehenderit 
+                    sit quos corrupti pariatur nam nisi fugit a vero eius iure cupiditate quam fugiat minima rem exercitationem odio in blanditiis? Ullam facere possimus error sequi dicta excepturi 
+                    tempore odio iusto laboriosam repudiandae? Molestiae dolorem nemo, eligendi velit quidem quasi soluta, consectetur excepturi a, necessitatibus tempore! Eveniet quas iure aperiam 
+                    quisquam, quidem repudiandae sequi laboriosam animi reiciendis!<a id="makers-products">Product link</a></p>
+            </div>
+        </div>
+       
+    </div>
+    <hr>
+{% endblock %}
