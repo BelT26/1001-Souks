@@ -8,3 +8,10 @@ class CityAdmin(admin.ModelAdmin):
     """determines how category details are displayed in the admin panel"""
     list_display = ('name',)
     ordering_by = ('name',)
+
+
+@admin.register(Maker)
+class MakerAdmin(admin.ModelAdmin):
+    """determines how category details are displayed in the admin panel"""
+    list_display = ('name', 'city')
+    ordering_by = ('name',)

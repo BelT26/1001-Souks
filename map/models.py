@@ -15,5 +15,16 @@ class City(models.Model):
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
-        return self.name
+        return f'{self.name}'
 
+
+class Maker(models.Model):
+    """A model to represent each of the featured producers"""
+    name = models.CharField(max_length=200, blank=False, null=False)
+    city = models.ForeignKey(City, null=True, blank=True,
+                             on_delete=models.SET_NULL)
+    description = models.TextField()
+    image1 = models.ImageField(null=True, blank=True)
+
+    def __str__(self):
+        return f'{self.name}'
