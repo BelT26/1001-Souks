@@ -27,10 +27,10 @@
     <hr>
     <div class="products-container container my-5">
         {% for product in products %}
-        <div class="card mx-5 my-2 p-2 shadow" style="width: 16rem;">
-            <img class="card-img-top" src="{{product.image.url}}" alt="Card image cap">
+        <div class="card mx-5 my-2 p-2 shadow purple-background" style="width: 16rem;">
+            <img class="card-img-top" src="{{product.image1.url}}" alt="Card image cap">
             <div class="card-body"> 
-                <h5 class="card-title">{{product.name}}</h5>                
+                <h5 class="card-title purple-text">{{product.name}}</h5>                
                 <p class="card-text item-price">£ {{product.price}}</p>
                 {% if product.maker %}
                 <p class="card-text item-maker">{{product.maker}}</p>

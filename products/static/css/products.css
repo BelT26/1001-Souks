@@ -1,3 +1,11 @@
+.custom-card {
+    border: #66023C;
+    background-color: rgb(231, 235, 239);
+    width: 300px;
+}
+
+
+
 .custom-button {
     background-color: #66023C;
     color: white;

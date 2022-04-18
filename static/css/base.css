@@ -28,6 +28,7 @@
     color: #2978D6 !important;
 }
 
+
 #search-dropdown {
     color: #66023C !important;
     border: #66023C 1px solid;
@@ -46,15 +47,21 @@ h1,
 }
 
 h1,
+hr,
 .purple-text {
     color: #66023C;
+}
+
+
+.purple-background {
+    background-color: #faf6f9;
 }
 
 #main-container {
     padding-top: 5.5rem;
     padding-bottom: 5rem;
     min-height: 100vh;
-    background-color: rgb(242, 249, 255);
+    background-color: #eae5d7;
 }
 
 #main-footer {

@@ -14,7 +14,7 @@ function initMap() {
             contentString: '<div id="content">' +
             '<div id="siteNotice">' +
             "</div>" +
-            '<h1 class="map-heading">Marrakesh</h1>' +
+            '<h1 class="map-heading text-center">Marrakesh</h1>' +
             '<div id="bodyContent">' +
             "<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large " +
             "sandstone rock formation in the southern part of the " +
