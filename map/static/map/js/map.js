@@ -9,18 +9,17 @@ function initMap() {
     });
     const locations = [
         { 
-            name: 'Marrakesh',
+            name: 'Marrakech',
             coords:  { lat: 31.63, lng: -7.98 },
             contentString: '<div id="content">' +
             '<div id="siteNotice">' +
             "</div>" +
-            '<h1 class="map-heading text-center">Marrakesh</h1>' +
+            '<h1 class="map-heading text-center">Marrakech</h1>' +
             '<div id="bodyContent">' +
             "<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large " +
             "sandstone rock formation in the southern part of the " +
             "Northern Territory, central Australia." +
-            '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">' +
-            "https://en.wikipedia.org/w/index.php?title=Uluru</a> " +
+            "<p>Attribution: Uluru, <a href=Marrakech> Further Info </a>" +
             "(last visited June 22, 2009).</p>" +
             "</div>" +
             "</div>"
@@ -36,7 +35,7 @@ function initMap() {
             "<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large " +
             "sandstone rock formation in the southern part of the " +
             "Northern Territory, central Australia." +
-            '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">' +
+            "<p>Attribution: Uluru, <a href=Taroudant> Further Info </a>" +
             "https://en.wikipedia.org/w/index.php?title=Uluru</a> " +
             "(last visited June 22, 2009).</p>" +
             "</div>" +
@@ -53,15 +52,14 @@ function initMap() {
             "<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large " +
             "sandstone rock formation in the southern part of the " +
             "Northern Territory, central Australia." +
-            '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">' +
-            "https://en.wikipedia.org/w/index.php?title=Uluru</a> " +
+            "<p>Attribution: Uluru, <a href=Fez> Further Info</a>" +
             "(last visited June 22, 2009).</p>" +
             "</div>" +
             "</div>"
             },
         {
             name: 'Essaouira',
-            coords: { lat: 31.51, lng: -9.76 },
+            coords: { lat: 31.51, lng: -9.76 },       
             contentString: '<div id="content">' +
             '<div id="siteNotice">' +
             "</div>" +
@@ -70,8 +68,7 @@ function initMap() {
             "<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large " +
             "sandstone rock formation in the southern part of the " +
             "Northern Territory, central Australia." +
-            '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">' +
-            "https://en.wikipedia.org/w/index.php?title=Uluru</a> " +
+            '<a href=Essaouira> Further Info </a>' +
             "(last visited June 22, 2009).</p>" +
             "</div>" +
             "</div>"

@@ -22,10 +22,11 @@
             </div>
         </div>     
     </div>
+    {% for maker in makers %}
     <hr>    
     <div class="maker-container container my-5">
         <div class="row">
-            <h2 class="cairo purple-text">Maker Name</h2>
+            <h2 class="cairo purple-text text-center">{{maker.name}}</h2>
         </div>
         <div class="row">
             <div class="col col-lg-8 maker-img">
@@ -38,8 +39,7 @@
                     tempore odio iusto laboriosam repudiandae? Molestiae dolorem nemo, eligendi velit quidem quasi soluta, consectetur excepturi a, necessitatibus tempore! Eveniet quas iure aperiam 
                     quisquam, quidem repudiandae sequi laboriosam animi reiciendis!<a id="makers-products">Product link</a></p>
             </div>
-        </div>
-       
+        </div>       
     </div>
-    <hr>
+    {% endfor %}
 {% endblock %}
