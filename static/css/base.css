@@ -145,12 +145,12 @@ hr,
 }
 
 .toast-button {
-    background-color: rgb(207, 232, 254);    
+    background-color: #EDC54D;
+    color:#66023C;      
 }
 
 .toast-button:hover,
 .toast-button:active {
-    background-color: rgb(180, 220, 254); 
-    border:#66023C;
-    color:#66023C;   
+    background-color: #e9cd7a; 
+    color:#4c012d;
 }

@@ -25,24 +25,29 @@
         {% endfor %}        
     </div>
     <hr>
-    <div class="products-container container my-5">
+    <div class="products-container row my-5">
         {% for product in products %}
-        <div class="card mx-5 my-2 p-2 shadow purple-background" style="width: 16rem;">
-            <img class="card-img-top" src="{{product.image1.url}}" alt="Card image cap">
-            <div class="card-body"> 
-                <h5 class="card-title purple-text">{{product.name}}</h5>                
-                <p class="card-text item-price">£ {{product.price}}</p>
-                {% if product.maker %}
-                <p class="card-text item-maker">{{product.maker}}</p>
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3 text-center">
+            <div class="card mx-auto my-4 p-2 yellow-background border" style="width: 16rem;">        
+                {% if product.image1 %}
+                <img class="card-img-top" src="{{product.image1.url}}" alt="Card image cap">
                 {% endif %}
-                {% if product.colour_selection %}
-                <p class="card-text item-colour">Colours</p>
-                {% endif %}
-                {% if product.size_selection %}
-                <p class="card-text item-colour">Sizes</p>
-                {% endif %}
-                <a href="{% url 'product_info' product.id %}" class="btn custom-button">View details</a>
-            </div>
+                <div class="card-body"> 
+                    <h5 class="card-title">{{product.name}}</h5>                                 
+                    <p class="card-text item-price">£ {{product.price}}</p>
+                    {% if product.producer %}
+                    <p class="card-text item-maker">{{product.producer}}</p>
+                    {% endif %}
+                    {% if product.colour1 %}
+                    <p class="card-text item-colour"><span>{% if product.colour2 %}Available Colours: {% else %}Colour: {% endif %} 
+                        {{ product.colour1 }} 
+                        {% if product.colour2 %} / {{ product.colour2 }} {% endif %}
+                        {% if product.colour3 %} / {{ product.colour3 }} {% endif %}</span>
+                    </p>
+                    {% endif %}
+                    <a href="{% url 'product_info' product.id %}" class="btn custom-button">View details</a>
+                </div>
+            </div> 
         </div>    
         {% endfor %}
     </div>
