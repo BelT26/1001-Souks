@@ -13,7 +13,7 @@
     <div class="products-container row my-5 mx-2">
         {% for product in products %}
         <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-            <div class="card mx-2 my-2 p-2 shadow purple-background" style="width: 16rem;">        
+            <div class="card mx-2 my-2 p-2 yellow-background border-0" style="width: 16rem;">        
                 {% if product.image1 %}
                 <img class="card-img-top" src="{{product.image1.url}}" alt="Card image cap">
                 {% endif %}
@@ -33,8 +33,7 @@
                     <a href="{% url 'product_info' product.id %}" class="btn custom-button">View details</a>
                 </div>
             </div> 
-        </div>
-              
+        </div>              
         {% endfor %}
     </div>    
 {% endblock %}

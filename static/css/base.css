@@ -57,6 +57,10 @@ hr,
     background-color: #faf6f9;
 }
 
+.yellow-background {
+    background-color: #eae5d7;
+}
+
 #main-container {
     padding-top: 5.5rem;
     padding-bottom: 5rem;

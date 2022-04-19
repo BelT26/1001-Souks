@@ -15,7 +15,7 @@ class CategoryAdmin(admin.ModelAdmin):
 class ProductAdmin(admin.ModelAdmin):
     """determines how product details are displayed in the admin panel"""
     list_filter = ('category',)
-    list_display = ('name', 'category', 'price', 'rating')
+    list_display = ('name', 'category', 'price',)
     search_fields = ['name', 'category']
 
     ordering_by = ('price',)

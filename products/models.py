@@ -1,5 +1,5 @@
 from django.db import models
-from map.models import City
+from map.models import City, Maker
 
 
 # Create your models here.
@@ -29,32 +29,28 @@ class Product(models.Model):
     name = models.CharField(max_length=200, blank=False, null=False)
     category = models.ForeignKey(Category, null=True, blank=True,
                                  on_delete=models.SET_NULL)
+    producer = models.ForeignKey(Maker, null=True, blank=True,
+                                 on_delete=models.CASCADE)
+    city = models.ForeignKey(City, null=True, blank=True,
+                             on_delete=models.SET_NULL)
     sku = models.CharField(max_length=200, null=False, blank=False)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    multibuy_offer = models.BooleanField(default=False, null=True, blank=True)
-    multibuy_details = models.TextField()
+    multibuy_offer = models.BooleanField(default=False, null=True, blank=True) 
     multibuy_num_items = models.IntegerField(null=True, blank=True)
     multibuy_total = models.DecimalField(max_digits=6, decimal_places=2)
-    rating = models.DecimalField(max_digits=2, decimal_places=1, null=True,
-                                 blank=True)
     image1 = models.ImageField(null=True, blank=True)
     image1_url = models.URLField(max_length=1024, null=True, blank=True)
     image_2 = models.ImageField(null=True, blank=True)
     image2_url = models.URLField(max_length=1024, null=True, blank=True)
     image_3 = models.ImageField(null=True, blank=True)
-    image3_url = models.URLField(max_length=1024, null=True, blank=True)
-    size_selection = models.BooleanField(default=False, null=True, blank=True)
+    image3_url = models.URLField(max_length=1024, null=True, blank=True)    
     size = models.CharField(max_length=200, null=True, blank=True)
     colour_selection = models.BooleanField(default=False, null=True,
                                            blank=True)
     colour1 = models.CharField(max_length=200, null=True, blank=True)
     colour2 = models.CharField(max_length=200, null=True, blank=True)
-    colour3 = models.CharField(max_length=200, null=True, blank=True)
-    colour4 = models.CharField(max_length=200, null=True, blank=True)
-    maker = models.CharField(max_length=200, blank=True, null=True)
-    city = models.ForeignKey(City, null=True, blank=True,
-                             on_delete=models.SET_NULL)
+    colour3 = models.CharField(max_length=200, null=True, blank=True)  
     product_type = models.CharField(max_length=200, blank=True, null=True)
     composition = models.CharField(max_length=200, null=True, blank=True)
 

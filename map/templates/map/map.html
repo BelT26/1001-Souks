@@ -9,13 +9,13 @@
 {% block content %}
 <div class="container-fluid" id="location-page-container">
     <h1 class="display-3 my-4" id="map-heading">Makers' Map</h1>
+    <h2 class="purple-text mb-4 text-center">Click on a marker for more information.</h2>
     <div id="map-container"></div> 
 </div>
     
 {% endblock %}
 {% block extra_js %}
-<!-- link to javascript file to connect to google maps api -->
-<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+<!-- link to javascript files to connect to Google maps api -->
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAe_MtKgYo4PVs0HC0QO2u0ihf9TD-a6ms&callback=initMap"></script>
 <script src="{% static 'map/js/map.js' %}"></script>
 {% endblock %}
