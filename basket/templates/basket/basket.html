@@ -15,39 +15,39 @@
     </div>
     <div class="row my-4">
         {% if basket_items %}
-        <div class="basket-summary">
+        <div class="basket-summary col-12">
             <table class="table table-sm table-borderless">
                 <thead>
                     <tr>
-                        <th scope="col" class="table-heading-purple">Product Info</th>
-                        <th scope="col"></th>
-                        <th scope="col" class="table-heading-purple">Product Colour</th>
-                        <th scope="col" class="table-heading-purple">Price</th>
-                        <th scope="col" class="table-heading-purple">Quantity</th>
-                        <th scope="col" class="table-heading-purple">Subtotal</th>
+                        <th scope="col w-auto" class="table-heading-purple" style="width: 20%">Product Info</th>
+                        <th scope="col" style="width: 12%"></th>
+                        <th scope="col w-auto" class="table-heading-purple" style="width: 17%">Product Colour</th>
+                        <th scope="col" class="table-heading-purple" style="width: 12%">Price</th>
+                        <th scope="col" class="table-heading-purple" style="width: 25%">Quantity</th>
+                        <th scope="col" class="table-heading-purple" style="width: 14%">Subtotal</th>
                     </tr>
                 </thead>
                 {% for item in basket_items %}                   
                     <tr>
-                        <td class="p-3 w-25">
-                            <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                        <td class="p-3" style="width: 20%">
+                            <img class="rounded" src="{{ item.product.image1.url }}" height="150">
                         </td>
-                        <td class="py-3">
+                        <td class="py-3" style="width: 12%">
                             <p class="my-0">{{ item.product.name }}</p>                                                      
                         </td>
                         {% if item.colour %}
-                        <td class="py-3">
+                        <td class="py-3" style="width: 17%">
                             <p class="my-0">{{ item.colour }}</p> 
                         </td>
                         {% else %}
-                        <td class="py-3">
+                        <td class="py-3" style="width: 17%">
                             <p class="my-0">N/A</p> 
                         </td>
                         {% endif %}
-                        <td class="py-3">
+                        <td class="py-3" style="width: 12%">
                             <p class="my-0">£ {{ item.product.price }}</p>
                         </td>
-                        <td class="py-3 w-25">
+                        <td class="py-3" style="width: 25%">
                             <form method="POST" class="form update-form" action="{% url 'adjust_basket' item.item_id %}">
                                 {% csrf_token %}
                                 <div class="col-12">
@@ -66,7 +66,7 @@
                                 <a class="remove-item" id="remove_{{ item.item_id }}" data-product_colour="{{ item.colour }}">Remove</a>
                             </div>                         
                         </td>
-                        <td class="py-3">
+                        <td class="py-3" style="width: 14%">
                             <p class="my-0">£ {{ item.subtotal|floatformat:2 }}</p>
                         </td>
                     </tr>                                

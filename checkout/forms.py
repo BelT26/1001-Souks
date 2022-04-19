@@ -4,12 +4,13 @@ from .models import Order
 
 class OrderForm(forms.ModelForm):
     """
-    Creates a form for user details
+    Creates a form for user details. Based on the
+    Boutique Ado order form
     """
     class Meta:
         """
         Defines the model that the form is
-        based on and the fiels shown.
+        based on and the fields displayed.
         """
         model = Order
         fields = ('full_name', 'email', 'phone_number',

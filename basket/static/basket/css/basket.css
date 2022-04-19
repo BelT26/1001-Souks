@@ -1,6 +1,6 @@
 .remove-item,
 .update-link {
-    color: #2978D6 !important; 
+    color: #66023C !important; 
     cursor: pointer;
     text-decoration: none;
 }
@@ -9,5 +9,5 @@
 .remove-item:active,
 .update-link:hover,
 .update-link:active {
-    color: #1B841B !important; 
+    color: #2978D6 !important; 
 }

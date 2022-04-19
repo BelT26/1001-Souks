@@ -52,10 +52,10 @@ hr,
     color: #66023C;
 }
 
-
-.purple-background {
-    background-color: #faf6f9;
+.red-text {
+    color: rgb(117, 3, 3);
 }
+
 
 .yellow-background {
     background-color: #eae5d7;

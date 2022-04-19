@@ -2,6 +2,7 @@ from django.contrib import admin
 
 from .models import Order, OrderLineItem
 
+
 # Code adapted from Boutique Ado
 class OrderLineItemAdminInline(admin.TabularInline):
     model = OrderLineItem
