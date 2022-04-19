@@ -10,10 +10,10 @@
     <div class="heading-container text-center">
         <h1 class="display-3 my-4">All Products</h2>
     </div>
-    <div class="products-container row my-5 mx-2">
+    <div class="products-container row my-5">
         {% for product in products %}
-        <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-            <div class="card mx-2 my-2 p-2 yellow-background border-0" style="width: 16rem;">        
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3 text-center">
+            <div class="card mx-auto my-4 p-2 yellow-background border" style="width: 16rem;">        
                 {% if product.image1 %}
                 <img class="card-img-top" src="{{product.image1.url}}" alt="Card image cap">
                 {% endif %}
@@ -24,12 +24,12 @@
                     {% if product.maker %}
                     <p class="card-text item-maker">{{product.maker}}</p>
                     {% endif %}
-                    <!-- {% if product.colour_selection %}
-                    <p class="card-text item-colour">Colours</p>
+                    {% if product.colour1 %}
+                    <p class="card-text item-colour"><span>Colours: {{ product.colour1 }} 
+                        {% if product.colour2 %} / {{ product.colour2 }} {% endif %}
+                        {% if product.colour3 %} / {{ product.colour3 }} {% endif %}</span>
+                    </p>
                     {% endif %}
-                    {% if product.size_selection %}
-                    <p class="card-text item-colour">Sizes</p>
-                    {% endif %} -->
                     <a href="{% url 'product_info' product.id %}" class="btn custom-button">View details</a>
                 </div>
             </div> 
