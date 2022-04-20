@@ -22,7 +22,7 @@ def basket_contents(request):
                 'quantity': item_data,
                 'product': product,
                 'subtotal': subtotal
-            })       
+            }) 
 
         else:
             product = get_object_or_404(Product, pk=item_id)
@@ -46,7 +46,7 @@ def basket_contents(request):
 
     return context
 
-    
+ 
 # def basket_contents(request):
 #     """"makes basket accessible across all apps"""
 #     basket_items = []
@@ -105,6 +105,4 @@ def basket_contents(request):
 #     }
 
 #     return context
-
-
-            
+       

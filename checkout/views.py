@@ -14,6 +14,9 @@ def checkout(request):
     can complete checkout. redirects user to
     home page if their basket is empty
     """
+    stripe_public_key = settings.STRIPE_PUBLIC_KEY
+    stripe_secret_key = settings.STRIPE_SECRET_KEY
+
     basket = request.session.get('basket', {})
     if not basket:
         messages.error(request, 'Your basket is currently empty')
@@ -22,11 +25,21 @@ def checkout(request):
     current_basket = basket_contents(request)
     total = current_basket['total']
     stripe_total = round(total * 100)
+    stripe.api_key = stripe_secret_key
+    intent = stripe.PaymentIntent.create(
+        amount=stripe_total,
+        currency=settings.STRIPE_CURRENCY,
+    )
+    print(intent)
 
     form = OrderForm()
-    
+
+    if not stripe_public_key:
+        messages.warning(request, 'Stripe public key is missing. \
+            Did you forget to set it in your environment?')
+ 
     return render(request, 'checkout/checkout.html', {
         'form': form,
-        'stripe_public_key': 'pk_test_51KVCjXLzPYZbKFCeKtJpmj7yQ4hByR7OUxl0NVO8EKsr4qBviIwtAE53x3k9ikM2TWIJJK0wLG0atu1LJi5sPj1i00isbVub7I',
-        'client_secret': 'test',
+        'stripe_public_key': stripe_public_key,
+        'client_secret': intent.client_secret,
     })
