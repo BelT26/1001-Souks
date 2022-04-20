@@ -56,6 +56,16 @@ hr,
     color: rgb(117, 3, 3);
 }
 
+.blue-link {
+    color: #2978D6;
+    text-decoration: none;
+}
+
+.blue-link:active,
+.blue-link:hover {
+    color: #a75a87;
+    text-decoration: none;
+}
 
 .yellow-background {
     background-color: #eae5d7;
