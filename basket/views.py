@@ -42,14 +42,14 @@ def add_to_basket(request, item_id):
                                       f' to {basket[item_id]} items')
         else:
             basket[item_id] = quantity
-            messages.success(request, f'Added {product.name} to your bag')
+            messages.success(request, f'Added {product.name} to your basket')
 
     request.session['basket'] = basket
     return redirect(redirect_url)
 
 
 def remove_from_basket(request, item_id):
-    """Remove the item from the shopping bag"""
+    """Remove the item from the shopping basket"""
     product = get_object_or_404(Product, pk=item_id)
     try:
         colour = None
@@ -65,7 +65,7 @@ def remove_from_basket(request, item_id):
                                       f'{colour} from your basket')
         else:
             basket.pop(item_id)
-            messages.success(request, f'Removed {product.name} from your bag')
+            messages.success(request, f'Removed {product.name} from your basket')
 
         request.session['basket'] = basket
         return HttpResponse(status=200)
@@ -103,7 +103,7 @@ def adjust_basket(request, item_id):
                                       f' to {basket[item_id]} items')
         else:
             basket.pop(item_id)
-            messages.success(request, f'Removed {product.name} from your bag')
+            messages.success(request, f'Removed {product.name} from your basket')
     request.session['basket'] = basket
     return redirect(reverse('basket'))
 
