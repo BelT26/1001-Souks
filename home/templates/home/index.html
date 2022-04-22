@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container-fluid mb-5" id="hero-img-container">
+    <div class="container-fluid mb-4" id="hero-img-container">
         <div class="row w-100">
             <div class="col-md-7 ml-auto d-flex justify-content-center" id="main-header-container">
                 <h1 class="display-3 text-light">1001 Moroccan Souks</h1>
@@ -15,19 +15,30 @@
         </div>
     </div>
     <div class="container mb-3" id="about-container">
-        <div class="row mb-2">
+        <div class="row mb-4">
             <div class="col">
-                <h2 class="text-center purple-text cairo">Intro Header</h2>
+                <h2 class="text-center purple-text cairo">The Tale of 1001 Moroccan Souks</h2>
             </div>            
         </div>
         <div class="row" id="about-content-container" class="d-flex justify-content-between">
             <div class="col-md-6 col-lg-5" id="about-img">
-                <img src="{% static 'home/images/cat-narrow.jpg' %}" />
+                <img src="{% static 'home/images/cat-narrow.jpg' %}" class="float-md-left"/>
             </div>
-            <div class="col-md-6 col-lg-7" id="intro-text">
-                <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam reiciendis doloribus mollitia placeat quia! Reiciendis velit, vero, deserunt eveniet expedita saepe hic placeat et, eligendi harum tenetur alias eum ipsa?</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique perferendis vero iusto, quasi animi illo recusandae repellat quae placeat asperiores, ex dolorum unde quam, distinctio dolor deleniti beatae quod possimus molestiae mollitia adipisci earum. Vero, neque distinctio. Labore quo facere ducimus est tempore doloribus explicabo, quidem officia voluptatum veniam iste, accusantium sit nihil ut. Debitis recusandae itaque ad et, omnis magni quae molestias. Qui adipisci atque, fuga, tempora nesciunt corporis distinctio laborum vero delectus, maxime nobis commodi excepturi perspiciatis ea. Maiores natus, saepe, adipisci neque repellendus blanditiis, quos eaque nesciunt aspernatur laborum quia. Explicabo ea possimus quia cum expedita modi!</p>
+            <div class="col-md-6 col-lg-7 mt-3 mt-md-0" id="intro-text">
+                <p class="lead">Morocco, a name that conjures mystery. The Sahara Desert, Atlas Mountains, Bogie looking at Bacall in Casablanca, and the caravan routes of the Berber tribes bringing their goods to trade in the souks of ancient cities.</p>
+                <p class="intro-font">Both the history and the craftsmanship of Morocco caught the imagination of a British tourist in 2014. The reality of her experience exceeded her expectations: Morocco was as exotic an assault on the senses as hoped for, with the added bonus of a welcoming population proud of their heritage.</p>
+                <p class="intro-font">1001 Moroccan Souks is a result of the geographical love affair that began with that first visit. The tourist had years of experience in fashion and luxury retail, shopping was in her blood as was a recognition of the skills of the master artisans working hard to preserve their crafts. </p>                
             </div>
-        </div>     
+        </div>
+        <div class="row mt-4" class="d-flex justify-content-between">
+            <div class="col-md-6 mt-3" id="intro-text2">                
+                <p class="intro-font">Our artisans use sustainable practices as much as possible. The importance of maintaining availability of natural materials is equal to the passing of skills to the next generation. The pandemic years, coupled with regular droughts, have been hard for people reliant on tourism for much of their income. The beauty and practicality of their wares are however undimmed.</p>
+                <p class="intro-font">We offer a range of shopping services for UK customers: you can buy products directly from Moroccan artisans through this website; many of the products can be personalised at your request; our artisans will make items to your bespoke requirements; and we can source individual items on request across the kingdom of Morocco.</p>
+                <p class="intro-font">Scheherazade</p>
+            </div>
+            <div class="col-md-6 mt-2" id="stall-img">
+                <img src="{% static 'home/images/stall.jpg' %}" class="float-md-right">
+            </div>
+        </div>         
     </div>
 {% endblock %}
