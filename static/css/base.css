@@ -157,6 +157,11 @@ select option[value=""] {
     color: #aab7c4 !important;
 }
 
+.login input,
+.signup input {
+    max-width: 25rem;
+}
+
 /* Bootstrap Toasts */
 
 .message-container {
