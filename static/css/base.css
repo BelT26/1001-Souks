@@ -147,6 +147,16 @@ hr,
     color: #66023C !important;
 }
 
+select,
+select option {
+    color: #000000;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #aab7c4 !important;
+}
+
 /* Bootstrap Toasts */
 
 .message-container {
