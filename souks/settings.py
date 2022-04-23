@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'map',
     'basket',
     'checkout',
+    'profiles',
 ]
 
 MIDDLEWARE = [
