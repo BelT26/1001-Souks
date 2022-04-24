@@ -60,13 +60,13 @@
                                             {% for item in order.lineitems.all %}
                                                 <li class="small">
                                                     {% if item.product.colour_selection %}
-                                                        Colour: {{ item.product.colour }}
+                                                        {{ item.product_colour }} 
                                                     {% endif %}{{ item.product.name }} x{{ item.quantity }}
                                                 </li>
                                             {% endfor %}
                                         </ul>
                                     </td>
-                                    <td>${{ order.total }}</td>
+                                    <td>£ {{ order.order_total }}</td>
                                 </tr>
                             {% endfor %}
                         </tbody>
