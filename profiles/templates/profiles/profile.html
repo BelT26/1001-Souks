@@ -32,10 +32,48 @@
                     <button class="btn custom-button mt-3">Update Details</button>
                 </form>
             </div>
+            {% if orders %}
             <div class="col-12 col-lg-6">
-                <h4 class="purple-text my-4">Order History</h4>
-                {{ orders }}
+                <h4 class="purple-text my-4">Order History</h4>                               
+                <div class="order-history table-responsive">
+                    <table class="table table-sm table-borderless">
+                        <thead>
+                            <tr>
+                                <th class="purple-text">Order Number</th>
+                                <th class="purple-text">Date</th>
+                                <th class="purple-text">Items</th>
+                                <th class="purple-text">Order Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for order in orders %}
+                                <tr>
+                                    <td>
+                                        <a href="{% url 'order_history' order.order_number %}"
+                                        title="{{ order.order_number }}">
+                                            {{ order.order_number|truncatechars:6 }}
+                                        </a>
+                                    </td>
+                                    <td>{{ order.date }}</td>
+                                    <td>
+                                        <ul class="list-unstyled">
+                                            {% for item in order.lineitems.all %}
+                                                <li class="small">
+                                                    {% if item.product.colour_selection %}
+                                                        Colour: {{ item.product.colour }}
+                                                    {% endif %}{{ item.product.name }} x{{ item.quantity }}
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </td>
+                                    <td>${{ order.total }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>            
             </div>
+            {% endif %}
         </div>
     </div>
 {% endblock %}
