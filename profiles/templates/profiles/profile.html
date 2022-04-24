@@ -11,6 +11,31 @@
                 <h1 class="display-4 my-4">My Profile</h1>
             </div>
         </div>
-        {{ profile }}
+        <div class="row">
+            <div class="col-12 col-lg-6">                
+                <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
+                    {% csrf_token %}
+                    <fieldset class="px-2 mb-3">
+                        <legend class="fieldset-label purple-text px-2 w-auto">Contact Details</legend>                        
+                        {{ form.default_email | as_crispy_field }}
+                        {{ form.default_phone_number | as_crispy_field }}
+                    </fieldset>
+                    <fieldset class="px-2 mb-3">
+                        <legend class="fieldset-label purple-text px-2 w-auto">Delivery Address</legend>                    
+                        {{ form.default_street_address1 | as_crispy_field }}
+                        {{ form.default_street_address2 | as_crispy_field }}                 
+                        {{ form.default_town_or_city | as_crispy_field }}
+                        {{ form.default_county | as_crispy_field }}
+                        {{ form.default_postcode | as_crispy_field }}                       
+                        {{ form.default_country | as_crispy_field }}                        
+                    </fieldset>                    
+                    <button class="btn custom-button mt-3">Update Details</button>
+                </form>
+            </div>
+            <div class="col-12 col-lg-6">
+                <h4 class="purple-text my-4">Order History</h4>
+                {{ orders }}
+            </div>
+        </div>
     </div>
 {% endblock %}

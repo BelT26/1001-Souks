@@ -8,8 +8,7 @@
     <div class="toast-body bg-white">
         {{ message }}        
     </div>
-    {% if total %}
-    
+    {% if total and not on_profile_page %}    
     <div class="basket-summary-container p-3">
         <p class="logo-font bg-white text-black py-1">Your Basket ({{ product_count }})</p>
         {% for item in basket_items %}
@@ -26,13 +25,21 @@
         {% endfor %}
         <div class="row">
             <div class="col">                       
-                <h6 class="my-2">Total :£ {{ total|floatformat:2 }}</h6>                    
-                <a href="{% url 'checkout' %}" class="btn toast-button my-2">
-                    <span class="text-uppercase">Checkout Now</span>
-                </a>
-            </div>
+                <h6 class="my-2">Total :£ {{ total|floatformat:2 }}</h6>
+                <div class="row">
+                    <div class="col">
+                        <a href="{% url 'checkout' %}" class="btn toast-button my-2">
+                            <span>Checkout Now</span>
+                        </a>
+                    </div>
+                    <div class="col">                                               
+                        <a href="{% url 'basket' %}" class="btn toast-button my-2">
+                            <span>View Basket</span>
+                        </a>
+                    </div>
+                </div>                
+            </div>            
         </div>
-    </div>
-    
+    </div>    
 {% endif %}
 </div>
