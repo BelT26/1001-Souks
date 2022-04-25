@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
+
 from .models import Product, Category
+from .forms import ProductForm
 
 
 # Create your views here.
@@ -49,3 +51,23 @@ def product_info(request, product_id):
         'product': selected_product,
     }
     return render(request, 'products/product.html', context)
+
+
+def add_product(request):
+    """ displays a form for superusers to add a product to the store """
+    form = ProductForm()
+
+    return render(request, 'products/add_product.html', {
+        'form': form,
+    })
+
+
+
+def add_category(request):
+    """ displays a form for superusers to add a new category """
+    form = CategoryForm()
+
+    return render(request, 'products/add_category.html', {
+        'form': form,
+    })
+

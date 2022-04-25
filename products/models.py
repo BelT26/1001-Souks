@@ -23,6 +23,9 @@ class Category(models.Model):
     def __str__(self):
         return f'{self.friendly_name}'
 
+    def get_friendly_name(self):
+        return self.friendly_name
+
 
 class Product(models.Model):
     """A model to represent each of the products sold"""

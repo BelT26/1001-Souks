@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from .models import City, Maker
+from .forms import MakerForm
 from products.models import Product
+
 
 
 # Create your views here.
@@ -23,3 +25,11 @@ def city_detail(request, city_name):
     }
     return render(request, 'map/city.html', context)
 
+
+def add_maker(request):
+    """ displays a form for superusers to add a new category """
+    form = MakerForm()
+
+    return render(request, 'products/add_maker.html', {
+        'form': form,
+    })
