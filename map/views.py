@@ -45,3 +45,24 @@ def add_maker(request):
     return render(request, 'products/add_maker.html', {
         'form': form,
     })
+
+
+def edit_maker(request, product_id):
+    """ displays a form to update an artisan's details """
+    maker = get_object_or_404(Maker, pk=maker_id)
+    if request.method == 'POST':
+        form = MakerForm(request.POST, request.FILES, instance=maker)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'The maker info has been updated.')
+            return redirect(reverse('city_detail', args=[maker.city.id]))
+        else:
+            messages.error(request, 'Unable to update maker. Please '
+                                    'check the details entered on the form.')
+    else:
+        form = MakerForm(instance=maker)
+
+    return render(request, 'products/edit_maker.html', {
+        'form': form,
+        'maker': maker,
+    })
