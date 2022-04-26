@@ -62,7 +62,15 @@ def edit_maker(request, product_id):
     else:
         form = MakerForm(instance=maker)
 
-    return render(request, 'products/edit_maker.html', {
+    return render(request, 'map/edit_maker.html', {
         'form': form,
         'maker': maker,
     })
+
+
+def delete_maker(request, maker_id):
+    """ Delete a maker """
+    maker = get_object_or_404(Maker, pk=maker_id)
+    maker.delete()
+    messages.success(request, 'Maker deleted!')
+    return redirect(reverse('map'))

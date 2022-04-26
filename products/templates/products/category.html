@@ -32,7 +32,7 @@
                 <div class="card mx-auto my-4 p-2 yellow-background border" style="width: 16rem;">        
                     {% if product.image1 %}
                     <img class="card-img-top" src="{{product.image1.url}}" alt="Card image cap">
-                    {% endif %}
+                    {% endif %}                    
                     <div class="card-body"> 
                         <h5 class="card-title">{{product.name}}</h5>                                 
                         <p class="card-text item-price">£ {{product.price}}</p>
@@ -48,6 +48,12 @@
                         {% endif %}
                         <a href="{% url 'product_info' product.id %}" class="btn custom-button">View details</a>
                     </div>
+                    {% if request.user.is_superuser %}
+                    <div class="d-flex justify-content-around">
+                        <a href="{% url 'edit_product' product.id %}" class="blue-link">Edit</a> 
+                        <a href="{% url 'delete_product' product.id %}" class="blue-link">Delete</a>
+                    </div>                   
+                    {% endif %}
                 </div> 
             </div>    
             {% endfor %}

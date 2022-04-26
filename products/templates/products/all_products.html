@@ -32,8 +32,14 @@
                         </p>
                         {% endif %}
                         <a href="{% url 'product_info' product.id %}" class="btn custom-button">View details</a>
-                    </div>
-                </div> 
+                        {% if request.user.is_superuser %}
+                    <div class="d-flex justify-content-around mt-2">
+                        <a href="{% url 'edit_product' product.id %}" class="blue-link">Edit</a> 
+                        <a href="{% url 'delete_product' product.id %}" class="blue-link">Delete</a>
+                    </div>                   
+                {% endif %}
+                    </div>                
+                </div>
             </div>              
             {% endfor %}
         </div> 

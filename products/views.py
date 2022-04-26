@@ -81,7 +81,7 @@ def edit_product(request, product_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'The product has been updated.')
-            return redirect(reverse('product_detail', args=[product.id]))
+            return redirect(reverse('product_info', args=[product.id]))
         else:
             messages.error(request, 'Unable to update product. Please '
                                     'check the details entered on the form.')
@@ -92,3 +92,11 @@ def edit_product(request, product_id):
         'form': form,
         'product': product,
     })
+
+
+def delete_product(request, product_id):
+    """ Delete a product from the store """
+    product = get_object_or_404(Product, pk=product_id)
+    product.delete()
+    messages.success(request, 'Product deleted!')
+    return redirect(reverse('products'))
