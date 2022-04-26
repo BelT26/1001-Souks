@@ -1,8 +1,9 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.contrib import messages
+
+from products.models import Product
 from .models import City, Maker
 from .forms import MakerForm
-from products.models import Product
-
 
 
 # Create your views here.
@@ -28,7 +29,18 @@ def city_detail(request, city_name):
 
 def add_maker(request):
     """ displays a form for superusers to add a new category """
-    form = MakerForm()
+    if request.method == 'POST':
+        form = MakerForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'A new maker has been added!')
+            return redirect(reverse('add_maker'))
+        else:
+            messages.error(request, 'Unable to add maker. Please check'
+                                    ' that you have completed the form '
+                                    'correctly.')
+    else:
+        form = MakerForm()
 
     return render(request, 'products/add_maker.html', {
         'form': form,

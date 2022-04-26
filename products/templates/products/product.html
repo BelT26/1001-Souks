@@ -13,15 +13,17 @@
     </div>
     <div class="row">
         <div class="col-md-6 product-img-container d-flex justify-content-center">
-            <img src="{{product.image1.url}}" class="product-detail-img">
+            {% if product.image1 %}
+            <img src="{{product.image1.url}}" class="product-detail-img" alt="{{product.name}}">
+            {% endif %}
             {% if product.image2 %}
             <div class="row">
                 <div class="col">
-                    <img src="{{product.image2_url}}" class="alt-product-detail-img">
+                    <img src="{{product.image2_url}}" class="alt-product-detail-img" alt="{{product.name}}">
                 </div>
                 {% if product.image3}
                 <div class="col">
-                    <img src="{{product.image3_url}}" class="alt-product-detail-img">
+                    <img src="{{product.image3_url}}" class="alt-product-detail-img" alt="{{product.name}}"> 
                 </div>
                 {% endif}
             </div>

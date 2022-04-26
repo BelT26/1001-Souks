@@ -8,7 +8,11 @@ class ProductForm(forms.ModelForm):
         model = Product
         fields = '__all__'
 
-    image = forms.ImageField(label='Image',
+    image1 = forms.ImageField(label='Image',
+                             required=False,)
+    image2 = forms.ImageField(label='Image',
+                             required=False,)
+    image3 = forms.ImageField(label='Image',
                              required=False,)
 
     def __init__(self, *args, **kwargs):
@@ -17,14 +21,4 @@ class ProductForm(forms.ModelForm):
         friendly_names = [(c.id, c.get_friendly_name()) for c in categories]
 
         self.fields['category'].choices = friendly_names
-
-
-class CategoryForm(forms.ModelForm):
-
-    class Meta:
-        model = Category
-        fields = '__all__'
-
-    image = forms.ImageField(label='Image',
-                             required=False,)
 

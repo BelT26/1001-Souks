@@ -15,9 +15,13 @@ def profile(request):
         form = UserProfileForm(request.POST, instance=user_profile)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Profile updated successfully')
-
-    form = UserProfileForm(instance=user_profile)
+            messages.success(request, 'Your profile '
+                                      ' has been updated')
+        else:
+            messages.error(request, 'Update failed. Please ensure that '
+                                    'you have completed the form correctly.')
+    else:
+        form = UserProfileForm(instance=user_profile)
     orders = user_profile.orders.all()
 
     return render(request, 'profiles/profile.html', {

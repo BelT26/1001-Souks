@@ -55,19 +55,19 @@ def product_info(request, product_id):
 
 def add_product(request):
     """ displays a form for superusers to add a product to the store """
-    form = ProductForm()
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your product has been added!')
+            return redirect(reverse('add_product'))
+        else:
+            messages.error(request, 'Unable to add product. Please check'
+                                    ' that you have completed the form '
+                                    'correctly.')
+    else:
+        form = ProductForm()
 
     return render(request, 'products/add_product.html', {
         'form': form,
     })
-
-
-
-def add_category(request):
-    """ displays a form for superusers to add a new category """
-    form = CategoryForm()
-
-    return render(request, 'products/add_category.html', {
-        'form': form,
-    })
-

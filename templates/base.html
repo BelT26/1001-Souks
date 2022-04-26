@@ -85,11 +85,20 @@
                         <div class="col-lg-3 col-xl-4 d-lg-flex justify-content-end" id="navbar-right"> 
                             <ul class="navbar-nav">
                                 {% if user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin</a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                      <a class="dropdown-item" href="{% url 'add_product' %}">Add Product</a>
+                                      <a class="dropdown-item" href="{% url 'add_maker' %}">Add Maker</a>
+                                    </div>
+                                  </li>                                    
+                                {% endif %}
                                 <li class="nav-item mx-2">
                                     <a class="nav-link nav-text" href="{% url 'account_logout' %}">Logout</a>
                                 </li>
                                 <li class="nav-item mx-2">
-                                    <a class="nav-link nav-text" href="{% url 'profile' %}">My Profile</a>
+                                    <a class="nav-link nav-text" href="{% url 'profile' %}">Profile</a>
                                 </li>
                                 {% else %}
                                 <li class="nav-item mx-2">
