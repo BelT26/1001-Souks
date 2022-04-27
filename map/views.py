@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required, user_passes_test
 
 from products.models import Product
 from .models import City, Maker
@@ -27,6 +28,8 @@ def city_detail(request, city_name):
     return render(request, 'map/city.html', context)
 
 
+@login_required
+@user_passes_test(lambda u: u.is_superuser)
 def add_maker(request):
     """ displays a form for superusers to add a new category """
     if request.method == 'POST':
@@ -47,7 +50,9 @@ def add_maker(request):
     })
 
 
-def edit_maker(request, product_id):
+@login_required
+@user_passes_test(lambda u: u.is_superuser)
+def edit_maker(request, maker_id):
     """ displays a form to update an artisan's details """
     maker = get_object_or_404(Maker, pk=maker_id)
     if request.method == 'POST':
@@ -68,6 +73,8 @@ def edit_maker(request, product_id):
     })
 
 
+@login_required
+@user_passes_test(lambda u: u.is_superuser)
 def delete_maker(request, maker_id):
     """ Delete a maker """
     maker = get_object_or_404(Maker, pk=maker_id)
