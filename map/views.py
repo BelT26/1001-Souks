@@ -45,7 +45,7 @@ def add_maker(request):
     else:
         form = MakerForm()
 
-    return render(request, 'products/add_maker.html', {
+    return render(request, 'map/add_maker.html', {
         'form': form,
     })
 

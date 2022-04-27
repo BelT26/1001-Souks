@@ -187,3 +187,33 @@ select option[value=""] {
     background-color: #e9cd7a; 
     color:#4c012d;
 }
+
+/* Product and Maker forms */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+    background-color: #fefefd;
+    border:#66023C 1px solid;
+    padding: 1px 5px;
+    color: #66023C;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-color: #66023C;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #66023C;
+    border-color: #66023C;
+}

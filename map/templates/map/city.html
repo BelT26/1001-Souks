@@ -32,15 +32,17 @@
         </div>
         <div class="row">            
             <div class="col col-lg-7 maker-info">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, facilis officia! Maxime quasi provident qui, placeat et dolores perferendis dolore perspiciatis eveniet tempora, 
-                    sequi nulla quaerat veritatis itaque illo. Eaque ducimus ipsam, laudantium nesciunt voluptatibus iusto. Aliquid, nostrum expedita molestias mollitia beatae nemo reprehenderit 
-                    sit quos corrupti pariatur nam nisi fugit a vero eius iure cupiditate quam fugiat minima rem exercitationem odio in blanditiis? Ullam facere possimus error sequi dicta excepturi 
-                    tempore odio iusto laboriosam repudiandae? Molestiae dolorem nemo, eligendi velit quidem quasi soluta, consectetur excepturi a, necessitatibus tempore! Eveniet quas iure aperiam 
-                    quisquam, quidem repudiandae sequi laboriosam animi reiciendis!</p>
+                <p>{{maker.description}}</p>
             </div>
             <div class="col col-lg-5 maker-img text-center">
                 <img src="{{maker.image1.url}}" width="350" class="mx-auto" alt="{{maker.name}}"/>
             </div>
+            {% if request.user.is_superuser %}
+                <div class="d-flex justify-content-left my-3">
+                    <h6 class="pl-3"><a href="{% url 'edit_maker' maker.id %}" class="blue-link pr-2">Edit Maker Details</a></h6>
+                    <h6 class="pl-3"><a href="{% url 'delete_maker' maker.id %}" class="blue-link pl-2">Delete Maker</a></h6>
+                </div>                   
+            {% endif %}
         </div>  
         <div class="row my-2">
             {% for product in products %}
@@ -49,7 +51,7 @@
                     <div class="card mx-2 my-2 p-2 border-0 yellow-background" style="width: 16rem;">        
                         {% if product.image1 %}
                         <img class="card-img-top" src="{{product.image1.url}}" alt="Card image cap">
-                        {% endif %}
+                        {% endif %}                        
                         <div class="card-body"> 
                             <h5 class="card-title">{{product.name}}</h5>          
                             <p class="card-text item-price">£ {{product.price}}</p>
