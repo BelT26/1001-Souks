@@ -44,10 +44,6 @@ class Product(models.Model):
     multibuy_total = models.DecimalField(max_digits=6, decimal_places=2)
     image1 = models.ImageField(null=True, blank=True)
     image1_url = models.URLField(max_length=1024, null=True, blank=True)
-    image_2 = models.ImageField(null=True, blank=True)
-    image2_url = models.URLField(max_length=1024, null=True, blank=True)
-    image_3 = models.ImageField(null=True, blank=True)
-    image3_url = models.URLField(max_length=1024, null=True, blank=True)    
     size = models.CharField(max_length=200, null=True, blank=True)
     colour_selection = models.BooleanField(default=False, null=True,
                                            blank=True)
