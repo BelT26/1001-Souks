@@ -31,7 +31,7 @@ class Query(models.Model):
     query_type = models.CharField(max_length=200, choices=QUERY_CHOICES, 
                                   default=OTHER)
     details = models.TextField(default='')
-    date_submitted = models.DateTimeField(auto_now_add=True)
+    date_submitted = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     
     def __str__(self):
         return f'{self.name}'

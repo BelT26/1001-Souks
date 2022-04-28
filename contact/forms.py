@@ -13,4 +13,4 @@ class QueryForm(forms.ModelForm):
         defines the model and the fields displayed
         """
         model = Query
-        exclude = 'date_submitted'
+        exclude = ('date_submitted',)

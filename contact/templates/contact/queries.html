@@ -8,22 +8,32 @@
 
 {% block content %}
 <div class="container">
-    <table>
+    <div class="row">
+        <div class="col my-4 text-center">
+            <h1 class="display-4">Customer Enquiries</h1>
+        </div>
+    </div>    
+    <table class="table">
         <thead>
-            <th>Date Submitted</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Query Type</th>
-            <th>Details</th>
+            <th class="purple-text">Date Submitted</th>
+            <th class="purple-text">Name</th>
+            <th class="purple-text">Email</th>
+            <th class="purple-text">Query Type</th>
+            <th class="purple-text">Details</th>
         </thead>
         <tbody>
             {% for query in queries %}
-            <td>{{query.date_submitted}}</td>
-            <td>{{query.name}}</td>
-            <td>{{query.email}}</td>
-            <td>{{query.query_type}}</td>
-            <td>{{query.details}}</td>
-            
+            <tr>
+                {% if query.date_submitted %}
+                <td>{{query.date_submitted}}</td>
+                {% else %}
+                <td>Unknown</td>
+                {% endif %}
+                <td>{{query.name}}</td>
+                <td>{{query.email}}</td>
+                <td>{{query.query_type}}</td>
+                <td>{{query.details}}</td>
+            </tr>           
             {% endfor %}
         </tbody>
     </table>
