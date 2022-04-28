@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<!-- link to custom css file -->
+<link rel="stylesheet" href="{% static 'contact/css/contact.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <table>
+        <thead>
+            <th>Date Submitted</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Query Type</th>
+            <th>Details</th>
+        </thead>
+        <tbody>
+            {% for query in queries %}
+            <td>{{query.date_submitted}}</td>
+            <td>{{query.name}}</td>
+            <td>{{query.email}}</td>
+            <td>{{query.query_type}}</td>
+            <td>{{query.details}}</td>
+            
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
