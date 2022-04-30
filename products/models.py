@@ -39,9 +39,10 @@ class Product(models.Model):
     sku = models.CharField(max_length=200, null=False, blank=False)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    multibuy_offer = models.BooleanField(default=False, null=True, blank=True) 
+    multibuy_offer = models.BooleanField(default=False, null=True, blank=True)
     multibuy_num_items = models.IntegerField(null=True, blank=True)
-    multibuy_total = models.DecimalField(max_digits=6, decimal_places=2)
+    multibuy_total = models.DecimalField(max_digits=6, decimal_places=2,
+                                         null=True, blank=True)
     image1 = models.ImageField(null=True, blank=True)
     image1_url = models.URLField(max_length=1024, null=True, blank=True)
     size = models.CharField(max_length=200, null=True, blank=True)
