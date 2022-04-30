@@ -10,3 +10,13 @@
     width: 95vw;
     height: 70vh;
 }
+
+
+@media screen and (max-width: 480px) {
+    .maker-img img,
+    .city-img img {
+        width: 300px;
+    }
+
+}
+    

@@ -10,14 +10,14 @@
     <div class="heading-container">
         <div class="row w-100">
             <div class="col">
-                <h1 class="display-3 mt-2 text-center purple-text">{{city.name}}</h1>
+                <h1 class="display-3 mt-4 text-center purple-text">{{city.name}}</h1>
             </div>            
         </div>
         <div class="row mt-3 px-3">
-            <div class="col-lg-6 category-img-container">
+            <div class="col-12 mb-3 col-xl-6 city-img text-center">
                 <img src="{{city.image.url}}" width="600">
             </div>
-            <div class="col-lg-6">
+            <div class="col-xl-6">
                 <p class="lead">{{city.description}}</h2>
             </div>
         </div>     
@@ -31,11 +31,11 @@
             </div>            
         </div>
         <div class="row">            
-            <div class="col col-lg-7 maker-info">
+            <div class="col-12 col-xl-7 maker-info p-3">
                 <p>{{maker.description}}</p>
             </div>
-            <div class="col col-lg-5 maker-img text-center">
-                <img src="{{maker.image1.url}}" width="350" class="mx-auto" alt="{{maker.name}}"/>
+            <div class="col-12 col-xl-5 text-center maker-img">
+                <img src="{{maker.image1.url}}" class="mx-auto" width="400" alt="{{maker.name}}"/>
             </div>
             {% if request.user.is_superuser %}
                 <div class="d-flex justify-content-left my-3">
@@ -47,8 +47,8 @@
         <div class="row my-2">
             {% for product in products %}
                 {% if product.producer == maker %}
-                <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-                    <div class="card mx-2 my-2 p-2 border-0 yellow-background" style="width: 16rem;">        
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3 text-center">
+                    <div class="card mx-4 my-2 p-2 border-0 yellow-background" style="width: 12rem;">        
                         {% if product.image1 %}
                         <img class="card-img-top" src="{{product.image1.url}}" alt="Card image cap">
                         {% endif %}                        

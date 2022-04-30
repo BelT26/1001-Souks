@@ -79,6 +79,14 @@ hr,
     border: 1px solid #66023C;
 }
 
+#logo-top {
+    height: 60px;
+}
+
+#logo-bottom {
+    height: 40px;
+}
+
 #main-container {
     padding-top: 5.5rem;
     padding-bottom: 5rem;
@@ -216,4 +224,21 @@ select option[value=""] {
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
     background-color: #66023C;
     border-color: #66023C;
+}
+
+/* media queries */
+
+@media only screen and (max-width: 600px) {
+    #logo-top {
+        height: 40px;
+    }
+
+    #logo-bottom {
+        height: 30px;
+    }
+
+    #main-nav {
+        background-color: #EDC54D;
+        height: auto;
+    }
 }

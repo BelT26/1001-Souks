@@ -7,7 +7,7 @@
 
 
 {% block allauth_content %}
-<div class="row">
+<div class="row my-4">
     <div class="col text-center">
         <h1>{% trans "Confirm E-mail Address" %}</h1>
     </div>
@@ -21,7 +21,7 @@
 
 <form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
 {% csrf_token %}
-    <button type="submit" class="btn custom-btn">{% trans 'Confirm' %}</button>
+    <button type="submit" class="btn custom-button my-3">{% trans 'Confirm' %}</button>
 </form>
 
 {% else %}

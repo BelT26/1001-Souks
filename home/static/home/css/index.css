@@ -16,7 +16,7 @@
     float:right;
     margin-left: 2rem;
     margin-bottom: 2rem;
-    padding: 0.25rem 1rem;
+    padding: 0.25rem 0.5rem;
 }
 
 .intro-font {
@@ -30,4 +30,23 @@
 
 #stall-img img {
     width: 500px;
+}
+
+
+/* media queries */
+
+@media only screen and (max-width: 440px) {
+    #main-header-container {        
+        margin: 2rem;
+    }
+
+    #about-img img {
+        width: 300px;
+        height: auto;
+        margin: 0 auto;
+    }
+    
+    #stall-img img {
+        width: 300px;
+    }
 }
