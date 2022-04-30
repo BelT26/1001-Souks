@@ -80,11 +80,11 @@ hr,
 }
 
 #logo-top {
-    height: 60px;
+    height: 60px !important;
 }
 
 #logo-bottom {
-    height: 40px;
+    height: 40px !important;
 }
 
 #main-container {
