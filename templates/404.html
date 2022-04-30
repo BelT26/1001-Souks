@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block extra_title %}
+Page Not Found
+{% endblock %}
+
+{% block content %}
+<!-- Contents of 404 page with a button linking back to the home page -->
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h2 id="404-title" class="purple-text cairo text-center m-5">Oops you seem to have wandered away from the souks!</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center">
+            <img src="{% static 'images/desert.png' %}"  alt="image of a man and a camel in a desert" height="250px">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center">
+            <button class="btn custom-button m-5"><a href="{% url 'index' %}">Back to the souks</a></button>
+        </div>
+    </div>
+</div>
+    
+        
+    
+        
+    
+        
+      
+</div>
+{% endblock %}
