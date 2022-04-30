@@ -29,7 +29,7 @@ def contact(request):
                                     'the form correctly.')
     else:
         form = QueryForm()
-    
+
     return render(request, 'contact/contact.html', {
         'form': form,
         'on_profile_page': True})

@@ -1,6 +1,5 @@
 from django.shortcuts import get_object_or_404
 from products.models import Product
-from django.conf import settings
 # the below code is based on the Boutique Ado walkthrough project
 
 
@@ -16,7 +15,7 @@ def basket_contents(request):
             product = get_object_or_404(Product, pk=item_id)
             product_count += item_data
             if product.multibuy_offer:
-                if item_data >= product.multibuy_num_items:
+                if product_count >= product.multibuy_num_items:
                     num_offers = item_data // product.multibuy_num_items
                     extras = item_data % product.multibuy_num_items
                     multibuy_amount = num_offers * product.multibuy_total
@@ -28,7 +27,7 @@ def basket_contents(request):
                     subtotal = item_data * product.price
             else:
                 total += item_data * product.price
-                subtotal = item_data * product.price  
+                subtotal = item_data * product.price
             basket_items.append({
                 'item_id': item_id,
                 'quantity': item_data,
@@ -39,12 +38,21 @@ def basket_contents(request):
         else:
             product = get_object_or_404(Product, pk=item_id)
             for colour, quantity in item_data['items_by_colour'].items():
-                item_names = []
-                item_names.append(product.name)
-                print(item_names)
-                total += quantity * product.price
-                subtotal = quantity * product.price
                 product_count += quantity
+                if product.multibuy_offer:
+                    if product_count >= product.multibuy_num_items:
+                        num_offers = quantity // product.multibuy_num_items
+                        extras = quantity % product.multibuy_num_items
+                        multibuy_amount = num_offers * product.multibuy_total
+                        extras_amount = extras * product.price
+                        subtotal = multibuy_amount + extras_amount
+                        total += multibuy_amount + extras_amount
+                    else:
+                        total += quantity * product.price
+                        subtotal = quantity * product.price
+                else:
+                    total += quantity * product.price
+                    subtotal = quantity * product.price
                 basket_items.append({
                     'item_id': item_id,
                     'quantity': quantity,

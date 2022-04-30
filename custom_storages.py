@@ -10,7 +10,7 @@ class StaticStorage(S3Boto3Storage):
 
 
 class MediaStorage(S3Boto3Storage):
-    """ 
+    """
     states location of media files
     """
     location = settings.MEDIAFILES_LOCATION

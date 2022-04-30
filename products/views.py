@@ -33,8 +33,8 @@ def all_products(request):
                 messages.error(request, "Please enter a search query")
                 return redirect(reverse('products'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
-            products = products.filter(queries)
+            qs = Q(name__icontains=query) | Q(description__icontains=query)
+            products = products.filter(qs)
 
     context = {
         'products': products,

@@ -15,4 +15,4 @@ class MakerForm(forms.ModelForm):
         fields = '__all__'
 
     image1 = forms.ImageField(label='Image',
-                             required=False, widget=CustomClearableFileInput)
+                              required=False, widget=CustomClearableFileInput)

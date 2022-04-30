@@ -5,7 +5,7 @@ from .models import Query
 
 class QueryForm(forms.ModelForm):
     """
-    displays a form for users to submit 
+    displays a form for users to submit
     a query
     """
     class Meta:

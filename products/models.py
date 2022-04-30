@@ -24,6 +24,9 @@ class Category(models.Model):
         return f'{self.friendly_name}'
 
     def get_friendly_name(self):
+        """
+        returns the friendly name
+        """
         return self.friendly_name
 
 
@@ -50,7 +53,7 @@ class Product(models.Model):
                                            blank=True)
     colour1 = models.CharField(max_length=200, null=True, blank=True)
     colour2 = models.CharField(max_length=200, null=True, blank=True)
-    colour3 = models.CharField(max_length=200, null=True, blank=True)  
+    colour3 = models.CharField(max_length=200, null=True, blank=True)
     product_type = models.CharField(max_length=200, blank=True, null=True)
     composition = models.CharField(max_length=200, null=True, blank=True)
 

@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 class City(models.Model):
     """A model to  represent the cities that are known for producing certain
