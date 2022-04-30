@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://souks-1001.herokuapp.com/</loc>
+  <lastmod>2022-04-30T14:01:09+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://souks-1001.herokuapp.com/map/</loc>
+  <lastmod>2022-04-30T14:01:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://souks-1001.herokuapp.com/products/?category=Basketry</loc>
+  <lastmod>2022-04-30T14:01:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://souks-1001.herokuapp.com/products/?category=Ceramics</loc>
+  <lastmod>2022-04-30T14:01:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://souks-1001.herokuapp.com/products/?category=Leatherwork</loc>
+  <lastmod>2022-04-30T14:01:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://souks-1001.herokuapp.com/products/?category=Metalwork</loc>
+  <lastmod>2022-04-30T14:01:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://souks-1001.herokuapp.com/products/?category=Textiles</loc>
+  <lastmod>2022-04-30T14:01:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://souks-1001.herokuapp.com/products/</loc>
+  <lastmod>2022-04-30T14:01:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://souks-1001.herokuapp.com/contact/</loc>
+  <lastmod>2022-04-30T14:01:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://souks-1001.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2022-04-30T14:01:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://souks-1001.herokuapp.com/accounts/login/</loc>
+  <lastmod>2022-04-30T14:01:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://souks-1001.herokuapp.com/basket/</loc>
+  <lastmod>2022-04-30T14:01:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://souks-1001.herokuapp.com/products/18</loc>
+  <lastmod>2022-04-30T14:01:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://souks-1001.herokuapp.com/products/19</loc>
+  <lastmod>2022-04-30T14:01:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://souks-1001.herokuapp.com/products/22</loc>
+  <lastmod>2022-04-30T14:01:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://souks-1001.herokuapp.com/products/21</loc>
+  <lastmod>2022-04-30T14:01:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://souks-1001.herokuapp.com/products/20</loc>
+  <lastmod>2022-04-30T14:01:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://souks-1001.herokuapp.com/products/14</loc>
+  <lastmod>2022-04-30T14:01:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://souks-1001.herokuapp.com/products/15</loc>
+  <lastmod>2022-04-30T14:01:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://souks-1001.herokuapp.com/products/58</loc>
+  <lastmod>2022-04-30T14:01:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://souks-1001.herokuapp.com/products/16</loc>
+  <lastmod>2022-04-30T14:01:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://souks-1001.herokuapp.com/products/17</loc>
+  <lastmod>2022-04-30T14:01:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://souks-1001.herokuapp.com/products/13</loc>
+  <lastmod>2022-04-30T14:01:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://souks-1001.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2022-04-30T14:01:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>

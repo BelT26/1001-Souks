@@ -143,9 +143,21 @@ hr,
     text-decoration: none;
 }
 
+
 .custom-button:active,
 .custom-button:hover {
     background-color: #560434;
+    color: #EDC54D;
+    text-decoration: none;
+}
+
+.custom-button a {
+    color: white;
+    text-decoration: none;
+}
+
+.custom-button:active a,
+.custom-button:hover a {
     color: #EDC54D;
     text-decoration: none;
 }

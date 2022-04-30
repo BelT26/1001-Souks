@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /basket/
+Disallow: /admin/
+Sitemap: https://souks-1001.herokuapp.com/sitemap.xml
