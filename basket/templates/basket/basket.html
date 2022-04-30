@@ -30,7 +30,7 @@
                 {% for item in basket_items %}                   
                     <tr>
                         <td class="p-3" style="width: 20%">
-                            {% if item.image1 %}
+                            {% if item.product.image1 %}
                             <img class="rounded" src="{{ item.product.image1.url }}" height="150" alt="item.product.name">
                             {% endif %}
                         </td>

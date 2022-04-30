@@ -14,7 +14,7 @@
         {% for item in basket_items %}
             <div class="row mx-2">
                 <div class="col-3 my-1">
-                    {% if item.image1 %}
+                    {% if item.product.image1 %}
                     <img class="w-100" src="{{ item.product.image1.url }}" alt="item.product.name">
                     {% endif %}
                 </div>
@@ -31,7 +31,7 @@
                 <div class="row">
                     <div class="col">
                         <a href="{% url 'checkout' %}" class="btn toast-button my-2">
-                            <span>Checkout Now</span>
+                            <span>Checkout</span>
                         </a>
                     </div>
                     <div class="col">                                               
