@@ -246,15 +246,7 @@ select option[value=""] {
 
 /* media queries */
 
-@media only screen and (max-width: 600px) {
-    #logo-top {
-        height: 40px;
-    }
-
-    #logo-bottom {
-        height: 30px;
-    }
-
+@media only screen and (max-width: 1199px) {    
     #main-nav {
         background-color: #EDC54D;
         height: auto;
