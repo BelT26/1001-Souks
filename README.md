@@ -27,12 +27,18 @@
     * [Product Info](#product-info)
     * [Basket](#basket)
     * [Checkout](#checkout)
+    * [Contact Form](#contact-form)
+    * [FAQs](#faqs)
+* [Admin Features](#admin-features)
     * [Product Admin](#product-admin)
+    * [Maker Admin](#maker-admin)
+    * [Customer Queries](#customer-queries)
 * [User Authentication](#user-authentication)
     * [User Profiles](#user-profiles)
 * [Search Enine Optimization](#search-engine-optimization)
-* [Social Media Marketing](#social-media-marketing)
+* [Marketing Strategy](#social-media-marketing)
 * [Technologies used](#technologies-used)
+    * [Payments](#payments)
     * [Languages](#languages)
     * [Libraries and Frameworks](#libraries-and-frameworks)
     * [Other Tools](#other-tools)
@@ -167,15 +173,10 @@ This page answers common questions and provides a link to the company privacy po
 
 ![FAQs] ()
 
-## User Authentication
-Django Allauth was installed to enable users to sign up, log in and log out.  I copied the Allauth templates into a separate folder and created a custom container for them in the allauth base.html which extends the project level base.html.
+### 404 Page
+I created a custom 404 page with a link to the home page to handle incorrect addresses.  The user can either return to the home page via the button or use the navigation bar to access a specific page.
 
-![Sign Up Form](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/signup.jpg)
-
-## User Profiles
-Users have the opportunity of saving their details for future session by creating a user profile using the below form.  I followed the code in the Boutique Ado walkthrough project to create the profile app then customised it for my site.
-
-![Profile Form](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/profile.jpg)
+![404 Page]()
 
 
 ## Admin Features
@@ -208,9 +209,97 @@ As an extra security step I intend to add an extra confirmation step before a us
 
 ### Customer Queries
 
+When a customer send through an enquiry via the contact form, the site owner receives an email notificaton and the details of the query are populated on the customer query page.
+
 ![Customer Queries]()
 
+Before deploying the site to a custom domain I intend to look at other ways of handling customer queries such as the site owner receiving an email with all the details of the query so that they do not need to refer to the website.
+
+## User Authentication
+Django Allauth was installed to enable users to sign up, log in and log out.  I copied the Allauth templates into a separate folder and created a custom container for them in the allauth base.html which extends the project level base.html.
+
+![Sign Up Form](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/signup.jpg)
+
+The logged in status of the user is reflected by the list items displayed in the right of the navbar
+
+When a superuser is logged in the below items appear:
+
+![Logged In Navbar](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/logged_in.jpg)
+
+When a user is logged out the following will be displayed instead:
+
+![Logged In Navbar](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/logged_in.jpg)
+
+I considered adding the following additional code to the navbar to reflect the user's logged in status but it made the navbar look overcrowded and it did not fit in elaswhere without disrupting the flow of the page.
+
+{% if request.user.is_authenticated %}
+    <li class="nav-item">
+        Logged in as {{ request.user.username}}
+    </li>
+{% endif %}
+
+
+## User Profiles
+Users have the opportunity of saving their details for future session by creating a user profile using the below form.  I followed the code in the Boutique Ado walkthrough project to create the profile app then customised it for my site.
+
+![Profile Form](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/profile.jpg)
+
+## Search Engine Optimisation
+
+The following strategies were used for Search Engine Optimisation
+
+Keywords
+
+![Keyword Table]()
+
+
+Use of keywords in alt tags and image names
+
+Examples of keyword in text.
+
+Metadata
+
+Links to highly ranked sites
+
+Trustworthiness, Authorativeness - background information on the story of the company conception.  Accurate geographical and historical information.  Information about the craftsmen who make the products.
+
+
+Design of the site and Google metrics - features to improve dwell time - info on the company, crafts and locations.
+The use of the map increased the number of pages visited and gives the user a feeling of exploring Morocco.
+
+User journey from the Makers' Map
+Morocco - destination summary - destination description - local artisan - products made by that artisan - individual product page.
+
+
+## Marketing Strategy
+1001 Moroccan Souks is a B2C buisness that will focus on selling to individuals.  Its primary target market is UK customers with an interest in travel, hand-made goods looking for unique gifts.  The aim of the site is to establish a solid brand reputation through meaningful content that engages the user and encourages them to explore and return.  The images, geographical and historical information and tales about the craftsmen are included to support this purpose.
+
+As no initial budget has been set aside for marketing, the initial strategy is to focus on organic growth through the SEO strategies mentioned above, social media platforms, primarily Facebook and Instagram and emails to subscribers.  Discounts and incentives will be offered to those who subscribe to the email list or who follow the company on Instagram and Facebook.
+
+The Facebook mock up is below
+
+![Facebook preview]()
+
+A link to the instagram account can be found on the site footer.
+
+A pop up subscriber form has been created via Mailchimp. 
+
+As the busisness develops and begins to make a profit, the marketing strategy will be reviewed and may include paid advertising on Google or social media sites,
+
+
 ## **Technologies used**
+
+### Payments
+
+The Stripe system was used to implement the payment functionality.  I used a combination of the Boutique Ado project and Stripe documentation to get the sysetem running.
+
+To test the payment system the following dummy details can be used:
+Card number: 4242 4242 4242 4242
+Expiry: 04/24
+CVC: 123
+Zip: 12345
+
+In the future I intend to explore how to remove the zip code as the store is intended for UK customers.
 
 ### **Languages**
 HTML
@@ -229,17 +318,66 @@ GitHub projects
 Balsamiq wireframes
 Excel
 
-#### **Payments""
-Stripe
-
 #### **File Hosting**
-Amazon Web Service
+Amazon Web Services
 
 #### **Deployment**
 Github
 Heroku
 
+### 404 Page
+I created a custom 404 page with a link to the home page to handle incorrect addresses.  The user can either return to the home page via the button or use the navigation bar to access a specific page.
+
+![404 Page](https://github.com/BelT26/RDFC/blob/main/club/static/club/screenshots/no-page.jpg)
+
 ## Testing
+
+### Automated Tests
+All css files passed through the W3C CSS validation service with no errors.
+
+All HTML files passed through the W3C validator with no issues.
+
+The map js file was copied to the JSHint validator and returned the following results:
+
+![JavaScript Validation]()
+
+The Python code was tested by running the command 'python3 -m flake8 in the terminal'
+The following errors were ignored as they were in automatically generated code:
+
+All errors in the migrations files
+
+
+The problems tab in the terminal was used to validate my Python code.
+Many errors were returned for the views file of the type 'Match has no objects member'.  These were ignored as advise in the CI blog walkthough project.
+Long line errors have not been corrected where they formed part of the preinstalled setting or I felt that splitting the lines would impair the readability of the code.
+
+I created some automated tests for views and forms following the examples in the Hello Django module.  These are not currently running correctly as they are returning errors concerning the database connection.  I have tested the same features manually and they are working as expected. 
+
+
+### Manual Tests
+Manual testing was carried out by myself and the eventual site owner.
+
+Messages confirming user actions appear in the form of toasts at the top of the screen. User actions tested include, adding items to the basket, completing a transaction, editing and deleting products and using the authentication system.
+
+User authentication features work and the items appearing on the navbar change according to user access.
+
+All navigation links work as expected.
+
+The Google map api works and displays the correct location. Links on the location markers correctly display a page with the correct city and local artisans.
+
+Items appear in the user's basket when they 
+
+The basket total updates correctly.
+
+The checkout page works and a confirmation page appears after a successful payment is made.  Stripe reflects that payments have been successful
+
+![Stripe Confirmation]()
+
+Superusers can add, edit and delete products and makers.
+
+Queries submitted on the contact form generate an email to the site owner and appear in the Customer Queries template.
+
+
 
 
 ## Bugs
