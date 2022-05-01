@@ -157,16 +157,6 @@ hr,
     text-decoration: none;
 }
 
-.custom-button a {
-    color: white;
-    text-decoration: none;
-}
-
-.custom-button:active a,
-.custom-button:hover a {
-    color: #EDC54D;
-    text-decoration: none;
-}
 
 .table-heading-purple {
     font-size: 1.25rem;

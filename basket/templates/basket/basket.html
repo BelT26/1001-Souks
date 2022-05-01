@@ -80,12 +80,9 @@
                 </tr>                
             </table>
             <div class="row">
-                <div class="col">
-                    <button class="btn d-inline custom-button">
-                        <a href="{% url 'products' %}" class="custom-button">Continue Shopping</a>
-                    </button>
-                    <button class="btn d-inline custom-button ml-4">
-                        <a href="{% url 'checkout' %}" class="custom-button">Checkout</a>
+                <div class="col">                    
+                    <a href="{% url 'products' %}" class=" btn d-inline custom-button">Continue Shopping</a>              
+                    <a href="{% url 'checkout' %}" class="btn d-inline custom-button ml-4">Checkout</a>
                     </button>
                 </div>
             </div>
@@ -107,12 +104,11 @@
         </div>
         {% endif %}
     </div>
-    </div>
 </div>
 {% endblock %}
 
 {% block extra_js %}
-<script type="text/javascript">
+<script>
     // The below code is taken from the Boutique Ado walkthrough
 
     // Update quantity on click
