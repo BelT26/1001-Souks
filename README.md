@@ -79,17 +79,15 @@ Cairo is used for the main headings and Alegreya Sans is used for the remaining 
 
 ### **Logo**
 The logo was designed by my friend Jo using Canva.
+
 ![Logo](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/logo.jpg)
 
 ## **Features**
 
-## User Authentication
-Django Allauth was installed to enable users to sign up, log in and log out.  I copied the Allauth templates into a separate folder and created a custom container for them in the allauth base.html which extends the project level base.html.
-
-![Sign Up Form](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/signup.jpg)
 
 ## Toasts
-Feedback on user interaction is provided via Django messages which appear in the form of toasts which I formatted to keep the general style of the website.  
+Feedback on user interaction is provided via Django messages which appear in the form of toasts which I formatted to keep the general style of the website. 
+
 ![Toast Example](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/toast.jpg)
 
 ### Navbar
@@ -97,6 +95,7 @@ The navbar was created using a Bootstrap template and modifed to fit the site re
 The left section contains the site logo.
 The middle section incorporates the main navigation links and includes a dropdown menu which a user can use to navigate to a product category and a dropdown search bar that in which the user can look for specific items.
 The right side shows whether the user is logged in, provides a link to their basket and offers them the possibility to log in or sign up if they are logged out.  If the user has superuser credentials, the admin dropdown menu is displayed in this section.
+
 ![Navbar](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/navbar.jpg)
 
 ## Footer
@@ -146,23 +145,55 @@ If no products meet the search term the user is advised of this and can return t
 The product info page provides a larger photo of the product and more details, including a description and the product size.
 From the product info page the user can add the product to their basket.
 
-![Product Info Page](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/intro.jpg)
+![Product Info Page](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/product_detail.jpg)
+
+### Basket
+The basket stores the items the user wishes to purchase before they checkout. I followed the code in the Boutique Ado walkthrough project to create the profile app then customised it for my site.
+
+![Basket](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/product_detail.jpg)
 
 ### Contact Form
 This form is intended for users who wish to send a more detailed query to the site owner. It incluced a dropdown menu with the most common query categories.
 
+![Contact Form](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/contact_form.jpg)
+
 ### FAQs
 This page answers common questions and provides a link to the company privacy policy.  I felt it was important to add this page to address GDPR concerns and to help the site rank more highly for trustworthiness and authorativeness
 
+![FAQs] ()
+
+## User Authentication
+Django Allauth was installed to enable users to sign up, log in and log out.  I copied the Allauth templates into a separate folder and created a custom container for them in the allauth base.html which extends the project level base.html.
+
+![Sign Up Form](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/signup.jpg)
+
+## User Profiles
+Users have the opportunity of saving their details for future session by creating a user profile using the below form.  I followed the code in the Boutique Ado walkthrough project to create the profile app then customised it for my site.
+
+![Profile Form](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/profile.jpg)
+
+
 ## Admin Features
+
+The below menu is displayed when a user is logged in as a superuser
+
+![Admin Menu](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/admin_menu.jpg)
 
 ### Product Admin
 
+![Add Product]()
+
+![Edit or Delete Product]()
+
 ### Maker Admin
+
+![Add Maker]()
+
+![Edit or Delete Maker]()
 
 ### Customer Queries
 
-
+![Customer Queries]()
 
 ## **Technologies used**
 
