@@ -52,6 +52,12 @@ hr,
     color: #66023C;
 }
 
+.signature {
+    font-family: 'Babylonica', cursive;
+    font-size: 2.5rem;
+    color: #66023C;
+}
+
 .red-text {
     color: rgb(117, 3, 3);
 }

@@ -11,6 +11,7 @@
         <h1 class="display-3 my-4">All Products</h2>
     </div>
     <div class="container">
+        {% if products %}
         <div class="row my-5">
             {% for product in products %}
             <div class="col-12 col-md-6 col-lg-4 col-xl-3 text-center">
@@ -43,6 +44,16 @@
             </div>              
             {% endfor %}
         </div> 
+        {% else %}
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="mb-5">Unfortunately your search yielded no results</h2>
+                    <button class="btn custom-button"><a href="{% url 'home' %}">Home</a></button>
+                </div>
+            </div>            
+        </div>
+        {% endif %}
     </div>
        
 {% endblock %}
