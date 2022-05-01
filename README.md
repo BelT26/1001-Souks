@@ -16,7 +16,7 @@
     * [Colors](#colors)
     * [Logo](#logo)  
 * [Features](#features)
-    * [Messages](#messages)
+    * [Toasts](#toasts)
     * [Navbar](#navbar)
     * [Footer](#footer)
     * [Home Page](#home-page)
@@ -63,38 +63,39 @@ I created ___ models for this project.  The relationship between the models can 
 
 ### **User Stories**
 
+Please see the below table for the user stories.  Each story is categorized under an epic and given a priority rating of 1 (must have), 2 (should have) or 3 (nice to have).
+
 
 ## **Design**
 
 ### **Colors**
 
-Morocco is famous for it's bold bright colours.  The original idea was to use a green font on a yellow background however the text was not easy to read and did not pass the accessibility tests on the contrast checker.  Jo suggested using Tyrian Purple, which as well as providing a great contrast against the yellow also incorporates some local culture as it is one of the Moroccan natural dyes, used in the past for the robes of Roman emperors, and is made from the shells of murex snails found off the coast of Essaouira (the purple islands).
+Morocco is famous for it's bold bright colours. The yellow used in the header and footer was inspired by the window grilles of the Majorelle garden in Morocco. Originally we planned to use a green font on a yellow background however the text was not clearly legible and did not pass contract checker accessibility tests.  Jo suggested using Tyrian Purple, which as well as providing a great contrast against the yellow also incorporates some more local culture as it is one of the Moroccan natural dyes, used in the past for the robes of Roman emperors, and is made from the shells of murex snails found off the coast of Essaouira (the purple islands).
 
 
 ### **Fonts**
 The fonts for the website were sourced from google fonts [Google Fonts](https://fonts.google.com/ "Google Fonts") 
-Cairo is used for the main headings and Alegreya Sans is used for the remaining text.
+Cairo is used for the main headings and Alegreya Sans is used for the remaining text and Babylonica for the signature.
 
 ### **Logo**
-The logo was designed by my friend Jo.
+The logo was designed by my friend Jo using Canva.
 
 ## **Features**
 
 ## User Authentication
-Django Allauth was installed to enable users to sign up, log in and log out.  I customised the standard Allauth model  
-so that users also need to enter their first and last name when signing up.  I copied the Allauth templates into a separate folder and used my own base.html file to extend them.  I also created a custom container for them so that they took up all the space on the screen that was not occupied by the header or footer.
+Django Allauth was installed to enable users to sign up, log in and log out.  I copied the Allauth templates into a separate folder and created a custom container for them in the allauth base.html which extends the project level base.html.
 
 ![Sign Up Form]()
 
-## Messages
-Feedback on user interaction is provided via Django messages.  Bootstrap classes have been applied to convey success or error messages.  The code to install and customise the messages was taken from the 'I think therefore I blog' walkthrough project. To improve the user experience, the messages automatically disappear after several seconds without the user needing to manually dismiss them.
-![Message Example]()
+## Toasts
+Feedback on user interaction is provided via Django messages which appear in the form of toasts which I formatted to keep the general style of the website.  
+![Toast Example]()
 
 ### Navbar
 The navbar was created using a Bootstrap template and modifed to fit the site requirements.  It is split into 3 sections:
 The left section contains the site logo.
 The middle section incorporates the main navigation links and includes a dropdown menu which a user can use to navigate to a product category and a dropdown search bar that in which the user can look for specific items.
-The right side shows whether the user is logged in, provided a link to their basket and offers them the possibility to log in or sign up if they are logged out.
+The right side shows whether the user is logged in, provides a link to their basket and offers them the possibility to log in or sign up if they are logged out.  If the user has superuser credentials, the admin dropdown menu is displayed in this section.
 ![Navbar]()
 
 ## Footer
@@ -113,33 +114,44 @@ Below the main image is a section featuring a carousel of images from Moroccan s
 
 
 ### Map
-The map provides the user with some information about the locations in Morocco that are famous for the production of certain crafts.  A popover appears when the user hovers on the location with a description and a photograph.  A link in the description takes the user to a page with more information about the location and a list of the available products that are made there. 
-
-I used the Bootstrap Resume walkthrough project as a guide to creating the JavaScript code to link to the Google Maps API.  Although they are not currently necessary  I decided to use marker clusters as the site owner mentioned  that they would like to add other locations to the map in the future. An asterisk was used inside the marker so that it resembled the Moroccan flag which is a star on a red background.
+The map provides the user with some information about the locations in Morocco that are famous for the production of certain crafts.  A popover appears when the user hovers on the location with a brief description and a link to the destination page.  A link in the description takes the user to a page with more information about the location and a list of the available products that are made there. I used the Google maps documentation as a guide to creating the map and adding the popover. An asterisk was used inside the marker so that it resembled the Moroccan flag which is a star on a red background.
 
 ![Map]()
 
 ### Location Page
-The location page is accessed from the links on the map page and is split into two sections.  The top section includes an image of the feature town with a description to the side.
+The location page is accessed from the links on the map page and is split into two sections.  The top section includes an image of the featured town with a description to the side.
 
-Below are a list of products that the user can buy that are made in the selected town.
+Below are a list of local producers with a picture and information about the maker and a list of their products that the user can view further information about by clicking on a button link.
 
 ![Location Page]()
 
 ### Category Page
 The category page follows a similar structure to the Location Page.  The top section contains an image representing the selected category alongside information about the history and traditions of the craft.
 
-Underneath, all the products available in that category are listed.
+Underneath, all the products available in that category are listed and the user can view further information by clicking on the link.
 
 ### All Products Page
-The All Products Page displays all of the products on sale. By default they are sorted by price.
+The All Products Page displays all of the products on sale. By default they are sorted by price. This template is also returned with all matching products when the user submits search criteria.  If no products meet the search term the user is advised of this and can return to the home page via the button.
 
 ### Product Info Page
+The product info page provides a larger photo of the product and more details, including a description and the product size.
+From the product info page the user can add the product to their basket.
 
 ### Contact Form
-This form is intended for users who wish to send a more detailed query to the site owner.
+This form is intended for users who wish to send a more detailed query to the site owner. It incluced a dropdown menu with the most common query categories.
+
+### FAQs
+This page answers common questions and provides a link to the company privacy policy.  I felt it was important to add this page to address GDPR concerns and to help the site rank more highly for trustworthiness and authorativeness
 
 ## Admin Features
+
+### Product Admin
+
+### Maker Admin
+
+### Customer Queries
+
+
 
 ## **Technologies used**
 
@@ -374,8 +386,6 @@ This set up will allow your site to use Postgres in deployment and sqlite3 in de
 ```
 
 
-[Back to Top](#table-of-contents)
-
 
 ## **Credits**
 The logo and text for the site were provided by Jo Jarvis
@@ -383,4 +393,12 @@ The logo and text for the site were provided by Jo Jarvis
 
 
 ### Future Development Possibilities
-Give customers the possibility to add ratings
+As this is a real project I will be continuing to work on it after submission and plan to implement the following features:
+
+Give customers the possibility to add ratings to products
+
+Add the possibility to sort and filter products by the rating given.
+
+Expand the range of products offered
+
+[Back to Top](#table-of-contents)
