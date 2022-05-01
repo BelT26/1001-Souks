@@ -1,6 +1,6 @@
 # **1001 Moroccan Souks**
 
-![Responsive preview of 1001 Moroccan Souks]()
+![Responsive preview of 1001 Moroccan Souks](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/responsive_preview.jpg)
 
 ## Table of Contents 
 * [Overview]
@@ -79,38 +79,39 @@ Cairo is used for the main headings and Alegreya Sans is used for the remaining 
 
 ### **Logo**
 The logo was designed by my friend Jo using Canva.
+![Logo](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/logo.jpg)
 
 ## **Features**
 
 ## User Authentication
 Django Allauth was installed to enable users to sign up, log in and log out.  I copied the Allauth templates into a separate folder and created a custom container for them in the allauth base.html which extends the project level base.html.
 
-![Sign Up Form]()
+![Sign Up Form](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/signup.jpg)
 
 ## Toasts
 Feedback on user interaction is provided via Django messages which appear in the form of toasts which I formatted to keep the general style of the website.  
-![Toast Example]()
+![Toast Example](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/toast.jpg)
 
 ### Navbar
 The navbar was created using a Bootstrap template and modifed to fit the site requirements.  It is split into 3 sections:
 The left section contains the site logo.
 The middle section incorporates the main navigation links and includes a dropdown menu which a user can use to navigate to a product category and a dropdown search bar that in which the user can look for specific items.
 The right side shows whether the user is logged in, provides a link to their basket and offers them the possibility to log in or sign up if they are logged out.  If the user has superuser credentials, the admin dropdown menu is displayed in this section.
-![Navbar]()
+![Navbar](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/navbar.jpg)
 
 ## Footer
 The contact email address is on the left side of the footer and allows users to get in touch with any queries. The email address opens up a link to the user's email account with a prepopulated 'to' field.
 The right side of the footer contains social media links to Facebook and Instagram. The icons change from purple to blue when the user hovers over them to indicate to the user that they are links. 
 
-![Footer]()
+![Footer](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/footer.jpg)
 
 ### Home Page
 At the top of the home page there is a hero image of some shops selling a variety of traditionsl Moroccan sandals and shoes.  This photograph was taken on a recent trip to Marrakech by my friend Jo.
 ![Hero Img]()
 
-Below the main image is a section featuring a carousel of images from Moroccan souks that provides the user with some background information on both the business and traditional Moroccan crafts.
+Below the main image is a section featuring the tale behind the conception of 1001 Moroccan souks that is told in the form of a story designed to engage the interest of the user. The information is accompanied by images from traditional Moroccan souks that were taken by Jo.
 
-![About]()
+![About](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/intro.jpg)
 
 
 ### Map
@@ -130,12 +131,22 @@ The category page follows a similar structure to the Location Page.  The top sec
 
 Underneath, all the products available in that category are listed and the user can view further information by clicking on the link.
 
+![Category Page]()
+
 ### All Products Page
-The All Products Page displays all of the products on sale. By default they are sorted by price. This template is also returned with all matching products when the user submits search criteria.  If no products meet the search term the user is advised of this and can return to the home page via the button.
+The All Products Page displays all of the products on sale. By default they are sorted by price. This template is also returned with all matching products when the user submits search criteria.  
+
+![All Products Page](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/all_products.jpg)
+
+If no products meet the search term the user is advised of this and can return to the home page via the button.
+
+![No Results Message](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/no_results.jpg)
 
 ### Product Info Page
 The product info page provides a larger photo of the product and more details, including a description and the product size.
 From the product info page the user can add the product to their basket.
+
+![Product Info Page](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/intro.jpg)
 
 ### Contact Form
 This form is intended for users who wish to send a more detailed query to the site owner. It incluced a dropdown menu with the most common query categories.
