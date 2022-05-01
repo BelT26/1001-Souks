@@ -25,6 +25,7 @@
     * [Category Page](#category-page)
     * [All Products](#all-products)
     * [Product Info](#product-info)
+    * [Basket](#basket)
     * [Checkout](#checkout)
     * [Product Admin](#product-admin)
 * [User Authentication](#user-authentication)
@@ -61,7 +62,7 @@ I used [Balsamiq](https://balsamiq.com/wireframes/) to create wireframes for my 
 
 I created ___ models for this project.  The relationship between the models can be seen in the table below. 
 
-### **User Stories**
+### **Agile Tools**
 
 Please see the below table for the user stories.  Each story is categorized under an epic and given a priority rating of 1 (must have), 2 (should have) or 3 (nice to have).
 
@@ -83,7 +84,6 @@ The logo was designed by my friend Jo using Canva.
 ![Logo](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/logo.jpg)
 
 ## **Features**
-
 
 ## Toasts
 Feedback on user interaction is provided via Django messages which appear in the form of toasts which I formatted to keep the general style of the website. 
@@ -150,7 +150,12 @@ From the product info page the user can add the product to their basket.
 ### Basket
 The basket stores the items the user wishes to purchase before they checkout. I followed the code in the Boutique Ado walkthrough project to create the profile app then customised it for my site.
 
-![Basket](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/product_detail.jpg)
+![Basket](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/basket.jpg)
+
+### Checkout
+The checkout page is used to confirm the order and complete payment.  Like the basket app it was largely based on the Boutique Ado code and then adapted to fit the site's style and requirements.
+
+![Checkout](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/checkout.jpg)
 
 ### Contact Form
 This form is intended for users who wish to send a more detailed query to the site owner. It incluced a dropdown menu with the most common query categories.
@@ -181,15 +186,25 @@ The below menu is displayed when a user is logged in as a superuser
 
 ### Product Admin
 
-![Add Product]()
+Superusers are able to add products using the below form that is accessed from the admin menu.
 
-![Edit or Delete Product]()
+![Add Product](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/add_product.jpg)
+
+To edit or delete products, superusers can click on the links displayed below the product on either the all products, category, location or product detail pages.
+
+If they select to edit a product a prepopulated field is displayed with the selected product's details
+
+As an extra security step I intend to add an extra confirmation step before a user can delete products to prevent items being deleted accidentally.
 
 ### Maker Admin
 
-![Add Maker]()
+![Add Maker](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/add_maker.jpg)
 
-![Edit or Delete Maker]()
+To edit or delete makers, superusers can click on the links displayed below the maker information on the location page.
+
+If they select to edit a maker a prepopulated field is displayed with the selected producer's details
+
+As an extra security step I intend to add an extra confirmation step before a user can delete makers to prevent suppliers being deleted accidentally.
 
 ### Customer Queries
 
