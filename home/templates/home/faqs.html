@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<!-- link to custom css file -->
+<link rel="stylesheet" href="{% static 'home/css/index.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row my-4">
+        <div class="col text-center">
+            <h1>Frequently Asked Questions</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h4 class="purple-text faq-question">How long will my items take to arrive?</h4>
+            <p class="faq-answer">Due to the individual nature of the items, please allow 3-4 weeks for delivery to the UK. Personalised and bespoke orders will take 4-6 weeks. </p>
+            <p class="faq-answer mb-4">If you require delivery outside of the UK please get in touch via our contact form. </p>
+            <h4 class="purple-text faq-question">Are postage and packing included?</h4>
+            <p class="faq-answer mb-4">Yes, postage and packing are free of charge for all items</p>
+            <h4 class="purple-text faq-question">What if I change my mind and want to cancel my order before it arrives?</h4>
+            <p class="faq-answer mb-4">All orders can be cancelled up to 14 days from delivery.  If you need to cancel later please contact us via our contact form.</p>
+            <h4 class="purple-text faq-question">My item arrived damaged. What should I do?</h4>
+            <p class="faq-answer mb-4">Please send us a photo of the damaged product.  We will arrange a full refund or a replacement.</p>
+            <h4 class="purple-text faq-question">I would like to return or exchange a product.  What should I do?</h4>
+            <p class="faq-answer mb-4">Please send your details on the contact form including your order number and we will be touch to discuss.</p>
+            <h4 class="purple-text faq-question">Do you have a company privacy policy?</h4>
+            <p class="faq-answer mb-4">Our privacy policy can be found <a href="https://www.privacypolicygenerator.info/live.php?token=DVUpfFC39RsywJVVzdm3WYRJy9dsOE5G" target="_blank" rel="noopener" aria-label="visit our privacy policy (opens in a new tab)">here</a>.</p>
+            <h4 class="purple-text faq-question">Where can I find out more about Morocco, its craftsmen and where to visit?</h4>
+            <p class="faq-answer mb-4">We recommend the following sites</p>
+            <ul>
+                <li>
+                    <p>For general information about visiting Morocco: <a href="https://www.visitmorocco.com/en" target="_blank" rel="noopener" aria-label="visit the Morocco Tourist Office (opens in a new tab)">Morocco Tourist Office </a></p>
+                </li>
+                <li>
+                    <p>To view stunning traditional art, baskets, jewellery and carpets: <a href="https://tiskiwin.wdro.net/" target="_blank" rel="noopener" aria-label="visit Musee Tiskiwin(opens in a new tab)">Musée Tiskiwin</a></p>
+                </li>
+                <li>
+                    <p>The Majorelle Gardens provide the colours that inspired Yves Saint Laurent (and 1001 Moroccan Souks), and a museum of Berber culture: <a href="https://www.jardinmajorelle.com/en/ " target="_blank" rel="noopener" aria-label="visit Majorelle Gardens (opens in a new tab)">Majorelle Gardens, Marrakech</a></p>
+                </li>
+                <li>
+                    <p>To discover more about Moroccan visual arts from the 20th century onwards: <a href="http://www.museemohammed6.ma/" target="_blank" rel="noopener" aria-label="visit  (opens in a new tab)"> Mohamed VI Museum of Modern and Contemporary Art, Rabat</a></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

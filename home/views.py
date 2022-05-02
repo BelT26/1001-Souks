@@ -5,3 +5,8 @@ from django.shortcuts import render
 def index(request):
     """returns the home page template"""
     return render(request, 'home/index.html')
+
+
+def faqs(request):
+    """returns a page with frequently asked questions"""
+    return render(request, 'home/faqs.html')
