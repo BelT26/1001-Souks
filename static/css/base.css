@@ -242,3 +242,20 @@ select option[value=""] {
         height: auto;
     }
 }
+
+@media only screen and (max-width: 480px) { 
+    
+    #main-footer {
+        padding: 0.4rem;
+    }
+
+    #main-footer i {
+        font-size: 2rem;
+        float:none;
+        padding: 0 3rem;
+    }
+
+    #contact-email h4 a {
+        font-size: 1rem;
+    }
+}

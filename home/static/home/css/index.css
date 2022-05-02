@@ -34,6 +34,11 @@
 
 
 /* media queries */
+@media only screen and (max-width: 732px) {
+    #hero-img-text {
+        font-size: 3rem !important;
+    }
+}
 
 @media only screen and (max-width: 440px) {
     #main-header-container {        
