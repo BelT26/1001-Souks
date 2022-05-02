@@ -11,6 +11,18 @@
     height: 70vh;
 }
 
+.marker-heading {
+    color: #66023c;
+}
+
+.marker-text {
+    font-size: 1rem;
+}
+
+.marker-link {
+    font-size: 1.2rem;
+}
+
 
 @media screen and (max-width: 480px) {
     .maker-img img,
