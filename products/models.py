@@ -18,9 +18,7 @@ class Category(models.Model):
     description = models.TextField(default='')
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
-    city = models.ForeignKey(City, null=True, blank=True,
-                             on_delete=models.SET_NULL)
-
+    
     def __str__(self):
         return f'{self.friendly_name}'
 

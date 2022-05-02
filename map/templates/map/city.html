@@ -30,13 +30,19 @@
                 <h2 class="cairo purple-text text-center mb-3">{{maker.name}}</h2>
             </div>            
         </div>
-        <div class="row">            
+        <div class="row">
+            {% if maker.image1 %}           
             <div class="col-12 col-xl-7 maker-info p-3">
                 <p>{{maker.description}}</p>
             </div>
             <div class="col-12 col-xl-5 text-center maker-img">
                 <img src="{{maker.image1.url}}" class="mx-auto" width="400" alt="{{maker.name}}"/>
             </div>
+            {% else %}
+            <div class="col-12 my-3">
+                <p>{{maker.description}}</p>
+            </div>
+            {% endif %}
             {% if request.user.is_superuser %}
                 <div class="d-flex justify-content-left my-3">
                     <h6 class="pl-3"><a href="{% url 'edit_maker' maker.id %}" class="blue-link pr-2">Edit Maker Details</a></h6>

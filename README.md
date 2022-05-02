@@ -3,7 +3,7 @@
 ![Responsive preview of 1001 Moroccan Souks](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/responsive_preview.jpg)
 
 ## Table of Contents 
-* [Overview]
+* [Overview](#overview)
 * [Planning](#planning)
     * [Wireframes](#wireframes)
     * [Database Structure](#database-structure)
@@ -54,7 +54,7 @@
 ## **Overview** 
 The project was created for Jo, a friend of mine with a real passion for Morocco.  Jo has a property in Marrakesh and through her frequent trips there has got to know many local craftsmen.  She was so impressed by their work that she has decided to set up a business importing their products to the UK and this website is intended to launch her new venture.
 
-When constructing the site I felt it was important not just to feature products but to take the user on a journey to discover the tales behind them and their producers.
+The company name is inspired by the Tales of 1001 Arabian Nights and When constructing the site I felt it was important not just to feature products but to tell a story and take the user on a journey to explore the crafts of Morocco and learn about their makers.
 
 ## **Planning**
 
@@ -65,6 +65,8 @@ I used [Balsamiq](https://balsamiq.com/wireframes/) to create wireframes for my 
 [All Products](wireframes/all_products.png)  
 [Map](wireframes/map.png)  
 [Contact Form](wireframes/contact.png)  
+
+### **User Journies**
 
 ### **Database Structure**
 
@@ -129,7 +131,7 @@ The map provides the user with some information about the locations in Morocco t
 ### Location Page
 The location page is accessed from the links on the map page and is split into two sections.  The top section includes an image of the featured town with a description to the side.
 
-Below are a list of local producers with a picture and information about the maker and a list of their products that the user can view further information about by clicking on a button link.
+Below are a list of local producers with information about the maker and a list of their products that the user can view further information about by clicking on a button link. We don't currently have images of the producers but I have adapted the code with an if statement so that uploaded images will appear at the side of the text. 
 
 ![Location Page](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/location_page.jpg)
 
@@ -312,6 +314,7 @@ JavaScript
 ### **Libraries and Frameworks**
 Django
 Bootstrap
+jQuery
 
 ### **Other Tools**
 
@@ -587,17 +590,11 @@ This set up will allow your site to use Postgres in deployment and sqlite3 in de
 ## **Credits**
 The logo and text for the site were provided by Jo Jarvis
 
-Photographs were provided by Jo Jarvis apart from the following images which were sourced on Unsplash:
+Photographs were taken by Jo Jarvis apart from the following images on the location pages, which were sourced on Unsplash:
 
-Category pages:
-Ceramics main image
-Textiles main image
-Leather main image
-
-Location pages:
-Marrakech main image
-Fez main image
-Essaouira main image
+Marrakech 
+Fez
+Essaouira
 
 
 ### Future Development Possibilities
