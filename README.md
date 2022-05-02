@@ -70,11 +70,24 @@ I used [Balsamiq](https://balsamiq.com/wireframes/) to create wireframes for my 
 
 ### **Database Structure**
 
-I created ___ models for this project.  The relationship between the models can be seen in the table below. 
+I created 8 models for this project.  The relationship between the models and the fields they contain can be seen in the diagram below. 
+
+![Model Relationships](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/model_relationships.jpg)
+
 
 ### **Agile Tools**
 
-Please see the below table for the user stories.  Each story is categorized under an epic and given a priority rating of 1 (must have), 2 (should have) or 3 (nice to have).
+I used Github projects to create a kanban board which I populated with my User Stories [Project Board](https://github.com/users/BelT26/projects/1)
+
+Each user story was mapped to an Epic through the use of labels.
+
+Each user story was also given a second label to mark its priority
+
+![Kanban Board](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/kanban_board.jpg)
+
+Once the user stories were decided they were broken down into smaller tasks as in the example below
+
+![Task Example](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/task.jpg)
 
 
 ## **Design**
@@ -85,8 +98,8 @@ Morocco is famous for it's bold bright colours. The yellow used in the header an
 
 
 ### **Fonts**
-The fonts for the website were sourced from google fonts [Google Fonts](https://fonts.google.com/ "Google Fonts") 
-Cairo is used for the main headings and Alegreya Sans is used for the remaining text and Babylonica for the signature.
+The fonts for the website were sourced from google fonts [Google Fonts](https://fonts.google.com/) 
+Cairo is used for the main headings, Alegreya Sans is used for the remaining text and Babylonica for the signature.
 
 ### **Logo**
 The logo was designed by my friend Jo using Canva.
@@ -116,7 +129,7 @@ The right side of the footer contains social media links to Facebook and Instagr
 
 ### Home Page
 At the top of the home page there is a hero image of some shops selling a variety of traditionsl Moroccan sandals and shoes.  This photograph was taken on a recent trip to Marrakech by my friend Jo.
-![Hero Img]()
+![Hero Img](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/hero_img_tablet.jpg)
 
 Below the main image is a section featuring the tale behind the conception of 1001 Moroccan souks that is told in the form of a story designed to engage the interest of the user. The information is accompanied by images from traditional Moroccan souks that were taken by Jo.
 
@@ -173,9 +186,9 @@ This form is intended for users who wish to send a more detailed query to the si
 ![Contact Form](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/contact_form.jpg)
 
 ### FAQs
-This page answers common questions and provides a link to the company privacy policy.  I felt it was important to add this page to address GDPR concerns and to help the site rank more highly for trustworthiness and authorativeness
+This page answers common questions and provides a link to the company privacy policy.  I felt it was important to add this page to gain the trust of potential customers and address any GDPR concerns they may have.  Links are provided at the bottom of the page for users who wish to learn more about the culture and crafts of Morocco.
 
-![FAQs] ()
+![FAQs] (https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/faqa.jpg)
 
 ### 404 Page
 I created a custom 404 page with a link to the home page to handle incorrect addresses.  The user can either return to the home page via the button or use the navigation bar to access a specific page.
@@ -215,7 +228,7 @@ As an extra security step I intend to add an extra confirmation step before a us
 
 When a customer send through an enquiry via the contact form, the site owner receives an email notificaton and the details of the query are populated on the customer query page.
 
-![Customer Queries]()
+![Customer Queries](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/customer_queries.jpg)
 
 Before deploying the site to a custom domain I intend to look at other ways of handling customer queries such as the site owner receiving an email with all the details of the query so that they do not need to refer to the website.
 
@@ -282,7 +295,8 @@ As no initial budget has been set aside for marketing, the initial strategy is t
 
 The Facebook mock up is below
 
-![Facebook preview]()
+![Facebook preview](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/facebook_page.jpg)
+![Facebook preview2](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/facebook_page2.jpg)
 
 A link to the instagram account can be found on the site footer.
 
