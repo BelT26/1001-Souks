@@ -14,6 +14,7 @@ class Category(models.Model):
     name = models.CharField(max_length=200, blank=False, null=False)
     friendly_name = models.CharField(max_length=200, blank=False, null=False,
                                      default='')
+    subtitle = models.CharField(max_length=300, blank=True, null=True)
     description = models.TextField(default='')
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)

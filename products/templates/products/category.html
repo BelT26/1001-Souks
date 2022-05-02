@@ -19,6 +19,13 @@
                 <img src="{{category.image.url}}" width="600" alt="{{category.name}}">
             </div>
             <div class="col-xl-6">
+                {% if category.subtitle %}
+                <div class="row">
+                    <div class="col text-center">
+                        <h2>{{category.subtitle}}</h2>
+                    </div>
+                </div>
+                {% endif %}
                 <p class="lead">{{category.description}}</p>
             </div>
         </div>
@@ -58,6 +65,5 @@
             </div>    
             {% endfor %}
         </div>
-    </div>
-    
+    </div>    
 {% endblock %}
