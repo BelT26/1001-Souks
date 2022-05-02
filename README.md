@@ -54,6 +54,8 @@
 ## **Overview** 
 The project was created for Jo, a friend of mine with a real passion for Morocco.  Jo has a property in Marrakesh and through her frequent trips there has got to know many local craftsmen.  She was so impressed by their work that she has decided to set up a business importing their products to the UK and this website is intended to launch her new venture.
 
+When constructing the site I felt it was important not just to feature products but to take the user on a journey to discover the tales behind them and their producers.
+
 ## **Planning**
 
 ### **Wireframes**
@@ -122,21 +124,21 @@ Below the main image is a section featuring the tale behind the conception of 10
 ### Map
 The map provides the user with some information about the locations in Morocco that are famous for the production of certain crafts.  A popover appears when the user hovers on the location with a brief description and a link to the destination page.  A link in the description takes the user to a page with more information about the location and a list of the available products that are made there. I used the Google maps documentation as a guide to creating the map and adding the popover. An asterisk was used inside the marker so that it resembled the Moroccan flag which is a star on a red background.
 
-![Map]()
+![Map](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/map.jpg)
 
 ### Location Page
 The location page is accessed from the links on the map page and is split into two sections.  The top section includes an image of the featured town with a description to the side.
 
 Below are a list of local producers with a picture and information about the maker and a list of their products that the user can view further information about by clicking on a button link.
 
-![Location Page]()
+![Location Page](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/location_page.jpg)
 
 ### Category Page
 The category page follows a similar structure to the Location Page.  The top section contains an image representing the selected category alongside information about the history and traditions of the craft.
 
-Underneath, all the products available in that category are listed and the user can view further information by clicking on the link.
+Underneath the category description, all the products available in that category are listed and the user can view further information by clicking on the link.
 
-![Category Page]()
+![Category Page](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/category.jpg)
 
 ### All Products Page
 The All Products Page displays all of the products on sale. By default they are sorted by price. This template is also returned with all matching products when the user submits search criteria.  
@@ -328,7 +330,7 @@ Heroku
 ### 404 Page
 I created a custom 404 page with a link to the home page to handle incorrect addresses.  The user can either return to the home page via the button or use the navigation bar to access a specific page.
 
-![404 Page](https://github.com/BelT26/RDFC/blob/main/club/static/club/screenshots/no-page.jpg)
+![404 Page]()
 
 ## Testing
 
@@ -585,6 +587,17 @@ This set up will allow your site to use Postgres in deployment and sqlite3 in de
 ## **Credits**
 The logo and text for the site were provided by Jo Jarvis
 
+Photographs were provided by Jo Jarvis apart from the following images which were sourced on Unsplash:
+
+Category pages:
+Ceramics main image
+Textiles main image
+Leather main image
+
+Location pages:
+Marrakech main image
+Fez main image
+Essaouira main image
 
 
 ### Future Development Possibilities
