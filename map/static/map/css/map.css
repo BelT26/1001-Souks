@@ -1,9 +1,9 @@
+/* custom css for map page */
 #location-page-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
 }
 
 #map-container {
@@ -23,12 +23,11 @@
     font-size: 1.2rem;
 }
 
-
+/* media queries */
 @media screen and (max-width: 480px) {
     .maker-img img,
     .city-img img {
         width: 300px;
     }
-
 }
     
