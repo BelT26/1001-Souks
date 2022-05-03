@@ -2,6 +2,8 @@
 
 ![Responsive preview of 1001 Moroccan Souks](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/responsive_preview.jpg)
 
+https://souks-1001.herokuapp.com/
+
 ## Table of Contents 
 * [Overview](#overview)
 * [Planning](#planning)
@@ -58,15 +60,23 @@ It is hoped that site users will arrive at their eventual purchase via one of th
 
 ![User Journies](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/user_journeys.jpg)
 
+At them moment there are only a limited number of products available in the store but further items will be added after Jo has had chance to increase her inventory.
+
 ## **Planning**
 
 ### **Wireframes**
-I used [Balsamiq](https://balsamiq.com/wireframes/) to create wireframes for my website.   
-[Home page](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/home_top_wf.jpg)  
+I used [Balsamiq](https://balsamiq.com/wireframes/) to create the wireframes linked below:. 
+
+[Home page](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/home_top_wf.jpg)
+
 [Footer](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/home_footer_wf.jpg)
-[Category](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/category_wf.jpg)  
-[All Products](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/products_wf.jpg)  
-[Map](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/product_detail_wf.jpg)  
+
+[Category](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/category_wf.jpg)
+
+[All Products](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/products_wf.jpg)
+
+[Map](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/product_detail_wf.jpg)
+
 [Contact Form](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/contact_wf.jpg)  
 
 
@@ -76,7 +86,7 @@ I created 8 models for this project. They are summarised in the below table:
 
 ![Models](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/models.jpg)
  
-The relationship between the models and the fields they contain can be seen in the diagram below. 
+The relationship between the each of the models can be seen in the diagram below. The query model is currently independent of all other models but could potentially be linked to the UserProfile. 
 
 ![Model Relationships](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/model_relationships.jpg)
 
@@ -104,8 +114,7 @@ Morocco is famous for it's bold bright colours. The yellow used in the header an
 
 
 ### **Fonts**
-The fonts for the website were sourced from google fonts [Google Fonts](https://fonts.google.com/) 
-Cairo is used for the main headings, Alegreya Sans is used for the remaining text and Babylonica for the signature.
+The fonts for the website were sourced from Google Fonts. Cairo is used for the main headings, Alegreya Sans is used for the remaining text and Babylonica for the signature.
 
 ### **Logo**
 The logo was designed by my friend Jo using Canva.
@@ -120,7 +129,7 @@ Feedback on user interaction is provided via Django messages which appear in the
 ![Toast Example](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/toast.jpg)
 
 ### Navbar
-The navbar was created using a Bootstrap template and modifed to fit the site requirements.  It is split into 3 sections:
+The navbar was created using a Bootstrap template and modifed to fit the site requirements.  It is split into 3 sections.
 The left section contains the site logo.
 The middle section incorporates the main navigation links and includes a dropdown menu which a user can use to navigate to a product category and a dropdown search bar that in which the user can look for specific items.
 The right side shows whether the user is logged in, provides a link to their basket and offers them the possibility to log in or sign up if they are logged out.  If the user has superuser credentials, the admin dropdown menu is displayed in this section.
@@ -135,9 +144,10 @@ The right side of the footer contains social media links to Facebook and Instagr
 
 ### Home Page
 At the top of the home page there is a hero image of some shops selling a variety of traditionsl Moroccan sandals and shoes.  This photograph was taken on a recent trip to Marrakech by my friend Jo.
+
 ![Hero Img](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/hero_img_tablet.jpg)
 
-Below the main image is a section featuring the tale behind the conception of 1001 Moroccan souks that is told in the form of a story designed to engage the interest of the user. The information is accompanied by images from traditional Moroccan souks that were taken by Jo.
+Below the main image is a section featuring the tale behind the conception of 1001 Moroccan souks that is told in the form of a story designed to engage the interest of the user. The information is accompanied by images from traditional Moroccan souks that were also taken by Jo.
 
 ![About](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/intro.jpg)
 
@@ -162,7 +172,7 @@ Underneath the category description, all the products available in that category
 ![Category Page](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/category.jpg)
 
 ### All Products Page
-The All Products Page displays all of the products on sale. By default they are sorted by price. This template is also returned with all matching products when the user submits search criteria.  
+The All Products Page displays all of the products on sale. This template is also returned with all matching products when the user submits search criteria.  
 
 ![All Products Page](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/all_products.jpg)
 
@@ -251,7 +261,7 @@ When a superuser is logged in the below items appear:
 
 When a user is logged out the following will be displayed instead:
 
-![Logged In Navbar](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/logged_in.jpg)
+![Logged In Navbar](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/logged_out.jpg)
 
 I considered adding the following another item to the navbar to reflect the user's logged in status eg 'Logged in as Bob', but it made the navbar look overcrowded and it did not fit in elaswhere without disrupting the flow of the page.
 
@@ -275,12 +285,12 @@ Links to high quality sites are provided on the FAQ page.
 
 I brainstormed keywords, then researched them using Google and wordtracker.com and settled on the below selection.
 
-![Keyword Table](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/profile.jpg)
+![Keyword Table](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/keywords.jpg)
 
 These were then incorporated into the meta tags and throughout the text of the site.
 
 ## Marketing Strategy
-1001 Moroccan Souks is a B2C buisness that will focus on selling to individuals.  Its primary target market is UK customers with an interest in travel, hand-made goods looking for unique gifts.  The aim of the site is to establish a solid brand reputation through meaningful content that engages the user and encourages them to explore and return.  The images, geographical and historical information and tales about the craftsmen are included to support this purpose.
+1001 Moroccan Souks is a B2C buisness that will focus on selling to individuals.  Its primary target market is UK customers with an interest in travel and hand-made goods, looking for unique gifts.  The aim of the site is to establish a solid brand reputation through meaningful content that engages the user and encourages them to explore and return.  The images, geographical and historical information and tales about the craftsmen are included to support this purpose.
 
 As no initial budget has been set aside for marketing, the initial strategy is to focus on organic growth through the SEO strategies mentioned above, social media platforms, primarily Facebook and Instagram and emails to subscribers.  Discounts and incentives will be offered to those who subscribe to the email list or who follow the company on Instagram and Facebook.
 
@@ -291,7 +301,7 @@ The Facebook mock up is below
 
 A link to the instagram account can be found on the site footer.
 
-A pop up subscriber form has been created via Mailchimp. 
+A pop up subscriber form has been created via Mailchimp. This appears 5 seconds after the user lands on the site.
 
 As the busisness develops and begins to make a profit, the marketing strategy will be reviewed and may include paid advertising on Google or social media sites,
 
@@ -335,10 +345,6 @@ Amazon Web Services
 Github
 Heroku
 
-### 404 Page
-I created a custom 404 page with a link to the home page to handle incorrect addresses.  The user can either return to the home page via the button or use the navigation bar to access a specific page.
-
-![404 Page](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/404_page.jpg)
 
 ## Testing
 
@@ -358,7 +364,9 @@ The JSHint validator and returned the following warnings for the map.js file :
 I ignored these warning as the code concerned was from the official Google maps documentation.
 
 The Python code was tested by running the command 'python3 -m flake8 in the terminal'
-Line length errors in the migrations files and the settings file as they were in automatically generated code or copied from official documentation.
+Line length errors in the migrations files and the settings file as they were in automatically generated code or copied from official documentation. The following were also ignored as they were taken from code copied from the Boutique Ado walkthrough
+
+![Flake8](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/jshint.jpg)
 
 
 ### Manual Tests
@@ -370,7 +378,7 @@ User authentication features work and the items appearing on the navbar change a
 
 All navigation links work as expected.
 
-The Google map api works and displays the correct location. Links on the location markers correctly display a page with the correct city and local artisans.
+The Google Map API works and displays the correct location. Links on the location markers correctly display a page with the correct city and local artisans.
 
 Items appear in the user's basket when they click 'add to basket'.
 
@@ -384,9 +392,11 @@ Queries submitted on the contact form generate an email to the site owner and ap
 
 
 ## Bugs
-Adjust basket call was not functioning.  Issue with the JQuery selector. Consulted Jquery documentation and realised that 'prev' in the JQuery selector referred to the next sibling.  As I had added a div to adjust the layout of the links the form was no longer a sibling of the anchor elements.  To correct this I went up one level by adding a .parent() selector before .prev().
+The adjust basket call was initially not functioning.  I realised that there was an issue with the JQuery selector. Consulted Jquery documentation and realised that 'prev' in the JQuery selector referred to the next sibling.  As I had added a div to adjust the layout of the links the form was no longer a sibling of the anchor elements.  To correct this I went up one level by adding a .parent() selector before .prev().
 
 The order email confirmation issue mentioned in the testing section has not been resolved.
+
+The edit_maker view was returning a 'page not found' error when redirected to the city_detail view.  I realised that this was because I was passing the city.id as an argument rather than the city name.
 
 At the moment the discounts for multibuy offers are only valid for items that do not have a colour selection or if the same colour is selected.  This is not a problem at the moment as no items with a colour selection have multibuy discounts, however I will need to implement this functionality if the site owner does decide to apply discounts to items with different colours in the future.
 
@@ -588,7 +598,6 @@ This set up will allow your site to use Postgres in deployment and sqlite3 in de
 ```
 
 
-
 ## **Credits**
 The logo and text for the site were provided by Jo Jarvis
 
@@ -598,13 +607,17 @@ Marrakech
 Fez
 Essaouira
 
+The graphic for the 404 page is from Pixabay.
 
-### Future Development Possibilities
+
+## **Future Development Possibilities**
 As this is a real project I will be continuing to work on it after submission and plan to implement the following features:
 
 Allow customers to register via social media accounts
 
 Give customers the possibility to add ratings to products
+
+Implement more sorting criteria as more products are added to the store.
 
 Add the possibility to sort and filter products by the rating given.
 
