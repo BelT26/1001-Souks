@@ -56,17 +56,21 @@ The project was created for Jo, a friend of mine with a real passion for Morocco
 
 The company name is inspired by the Tales of 1001 Arabian Nights and When constructing the site I felt it was important not just to feature products but to tell a story and take the user on a journey to explore the crafts of Morocco and learn about their makers.
 
+It is hoped that site users will arrive at their eventual purchase via one of the following routes
+
+![User Journies](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/user_journies.jpg)
+
 ## **Planning**
 
 ### **Wireframes**
 I used [Balsamiq](https://balsamiq.com/wireframes/) to create wireframes for my website.   
-[Home page](wireframes/home.png)  
-[Category](wireframes/category.png)  
-[All Products](wireframes/all_products.png)  
-[Map](wireframes/map.png)  
-[Contact Form](wireframes/contact.png)  
+[Home page](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/home_top_wf.jpg)  
+[Footer]([Home page](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/home_footer_wf.jpg)  )
+[Category](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/category_wf.jpg)  
+[All Products](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/products_wf.jpg)  
+[Map](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/product_detail_wf.jpg)  
+[Contact Form](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/contact_wf.jpg)  
 
-### **User Journies**
 
 ### **Database Structure**
 
