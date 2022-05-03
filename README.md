@@ -7,10 +7,7 @@
 * [Planning](#planning)
     * [Wireframes](#wireframes)
     * [Database Structure](#database-structure)
-    * [Agile Tools](#agile-tools)
-        * [Epics](#epics)
-        * [User Stories](#user-stories)
-        * [Tasks](#tasks)   
+    * [Agile Tools](#agile-tools)       
 * [Design](#design)
     * [Fonts](#fonts)
     * [Colors](#colors)
@@ -23,12 +20,13 @@
     * [Map](#map)
     * [Location Page](#location-page)
     * [Category Page](#category-page)
-    * [All Products](#all-products)
-    * [Product Info](#product-info)
+    * [All Products](#all-products-page)
+    * [Product Info](#product-info-page)
     * [Basket](#basket)
     * [Checkout](#checkout)
     * [Contact Form](#contact-form)
     * [FAQs](#faqs)
+    * [404 Page](#404-page)
 * [Admin Features](#admin-features)
     * [Product Admin](#product-admin)
     * [Maker Admin](#maker-admin)
@@ -65,7 +63,7 @@ It is hoped that site users will arrive at their eventual purchase via one of th
 ### **Wireframes**
 I used [Balsamiq](https://balsamiq.com/wireframes/) to create wireframes for my website.   
 [Home page](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/home_top_wf.jpg)  
-[Footer]([Home page](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/home_footer_wf.jpg)  )
+[Footer](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/home_footer_wf.jpg)
 [Category](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/category_wf.jpg)  
 [All Products](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/products_wf.jpg)  
 [Map](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/product_detail_wf.jpg)  
@@ -76,8 +74,8 @@ I used [Balsamiq](https://balsamiq.com/wireframes/) to create wireframes for my 
 
 I created 8 models for this project. They are summarised in the below table:
 
-![Models](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/model_relationships.jpg)
-
+![Models](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/models.jpg)
+ 
 The relationship between the models and the fields they contain can be seen in the diagram below. 
 
 ![Model Relationships](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/model_relationships.jpg)
@@ -196,12 +194,12 @@ This form is intended for users who wish to send a more detailed query to the si
 ### FAQs
 This page answers common questions and provides a link to the company privacy policy.  I felt it was important to add this page to gain the trust of potential customers and address any GDPR concerns they may have.  Links are provided at the bottom of the page for users who wish to learn more about the culture and crafts of Morocco.
 
-![FAQs] (https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/faqa.jpg)
+![FAQs] (https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/faqs.jpg)
 
 ### 404 Page
 I created a custom 404 page with a link to the home page to handle incorrect addresses.  The user can either return to the home page via the button or use the navigation bar to access a specific page.
 
-![404 Page]()
+![404 Page](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/404_page.jpg)
 
 
 ## Admin Features
@@ -255,14 +253,7 @@ When a user is logged out the following will be displayed instead:
 
 ![Logged In Navbar](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/logged_in.jpg)
 
-I considered adding the following additional code to the navbar to reflect the user's logged in status but it made the navbar look overcrowded and it did not fit in elaswhere without disrupting the flow of the page.
-
-{% if request.user.is_authenticated %}
-    <li class="nav-item">
-        Logged in as {{ request.user.username}}
-    </li>
-{% endif %}
-
+I considered adding the following another item to the navbar to reflect the user's logged in status eg 'Logged in as Bob', but it made the navbar look overcrowded and it did not fit in elaswhere without disrupting the flow of the page.
 
 ## User Profiles
 Users have the opportunity of saving their details for future session by creating a user profile using the below form.  I followed the code in the Boutique Ado walkthrough project to create the profile app then customised it for my site.
@@ -271,30 +262,22 @@ Users have the opportunity of saving their details for future session by creatin
 
 ## Search Engine Optimisation
 
-The following strategies were used for Search Engine Optimisation
+The following strategies were used for Search Engine Optimisation:
 
-Keywords
+Care was taken to provide high quality informative content to keep the user engaged and to rank highly with Google raters.
+The background information on the story of the company conception serves to increase the trustworthiness of the site.  Accurate geographical and historical information and details about the craftsmen who make the products help to portray the site as authoratative.
 
-![Keyword Table]()
+The concept of the 'User Journeys' as described in the [Overview](#overview) is designed to increase the amount of time the user stays on the site and the number of pages visited with the aim of achieving positive results on Google metrics. 
 
+A sitemap.xml and robots.txt file have been included.
 
-Use of keywords in alt tags and image names
+Links to high quality sites are provided on the FAQ page.
 
-Examples of keyword in text.
+I brainstormed keywords, then researched them using Google and wordtracker.com and settled on the below selection.
 
-Metadata
+![Keyword Table](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/profile.jpg)
 
-Links to highly ranked sites
-
-Trustworthiness, Authorativeness - background information on the story of the company conception.  Accurate geographical and historical information.  Information about the craftsmen who make the products.
-
-
-Design of the site and Google metrics - features to improve dwell time - info on the company, crafts and locations.
-The use of the map increased the number of pages visited and gives the user a feeling of exploring Morocco.
-
-User journey from the Makers' Map
-Morocco - destination summary - destination description - local artisan - products made by that artisan - individual product page.
-
+These were then incorporated into the meta tags and throughout the text of the site.
 
 ## Marketing Strategy
 1001 Moroccan Souks is a B2C buisness that will focus on selling to individuals.  Its primary target market is UK customers with an interest in travel, hand-made goods looking for unique gifts.  The aim of the site is to establish a solid brand reputation through meaningful content that engages the user and encourages them to explore and return.  The images, geographical and historical information and tales about the craftsmen are included to support this purpose.

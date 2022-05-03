@@ -7,5 +7,4 @@ from .models import UserProfile
 class UserProfileAdmin(admin.ModelAdmin):
     """determines how profile details are displayed in the admin panel"""
     list_display = ('user', 'default_email')
-
-    
+ 
