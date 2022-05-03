@@ -366,7 +366,7 @@ I ignored these warning as the code concerned was from the official Google maps 
 The Python code was tested by running the command 'python3 -m flake8 in the terminal'
 Line length errors in the migrations files and the settings file as they were in automatically generated code or copied from official documentation. The following were also ignored as they were taken from code copied from the Boutique Ado walkthrough
 
-![Flake8](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/jshint.jpg)
+![Flake8](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/flake8.jpg)
 
 
 ### Manual Tests
