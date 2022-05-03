@@ -347,30 +347,27 @@ Heroku
 ### 404 Page
 I created a custom 404 page with a link to the home page to handle incorrect addresses.  The user can either return to the home page via the button or use the navigation bar to access a specific page.
 
-![404 Page]()
+![404 Page](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/404_page.jpg)
 
 ## Testing
 
 ### Automated Tests
-All css files passed through the W3C CSS validation service with no errors.
+All CSS files passed through the W3C CSS validation service with no errors.
+
+![CSS Validation](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/css_validation.jpg)
 
 All HTML files passed through the W3C validator with no issues.
 
-The map js file was copied to the JSHint validator and returned the following results:
+![HTML Validation](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/html_validation.jpg)
 
-![JavaScript Validation]()
+The JSHint validator and returned the following warnings for the map.js file :
+
+![JavaScript Validation](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/jshint.jpg)
+
+I ignored these warning as the code concerned was from the official Google maps documentation.
 
 The Python code was tested by running the command 'python3 -m flake8 in the terminal'
-The following errors were ignored as they were in automatically generated code:
-
-All errors in the migrations files
-
-
-The problems tab in the terminal was used to validate my Python code.
-Many errors were returned for the views file of the type 'Match has no objects member'.  These were ignored as advise in the CI blog walkthough project.
-Long line errors have not been corrected where they formed part of the preinstalled setting or I felt that splitting the lines would impair the readability of the code.
-
-I created some automated tests for views and forms following the examples in the Hello Django module.  These are not currently running correctly as they are returning errors concerning the database connection.  I have tested the same features manually and they are working as expected. 
+Line length errors in the migrations files and the settings file as they were in automatically generated code or copied from official documentation.
 
 
 ### Manual Tests
@@ -384,23 +381,23 @@ All navigation links work as expected.
 
 The Google map api works and displays the correct location. Links on the location markers correctly display a page with the correct city and local artisans.
 
-Items appear in the user's basket when they 
+Items appear in the user's basket when they click 'add to basket'.
 
-The basket total updates correctly.
+The basket total updates correctly and multibuy discounts are applied where applicable.
 
-The checkout page works and a confirmation page appears after a successful payment is made.  Stripe reflects that payments have been successful
-
-![Stripe Confirmation]()
+The checkout page works and a confirmation page appears after a successful payment is made.  Stripe reflects that payments have been successful however a confirmation email is not generated to the user.  I spent several hours trying to resolve this issue and eventually contacted Tutor Support.  Unfortunately they were also unable to identify why this bug is occurring.
 
 Superusers can add, edit and delete products and makers.
 
 Queries submitted on the contact form generate an email to the site owner and appear in the Customer Queries template.
 
 
-
-
 ## Bugs
 Adjust basket call was not functioning.  Issue with the JQuery selector. Consulted Jquery documentation and realised that 'prev' in the JQuery selector referred to the next sibling.  As I had added a div to adjust the layout of the links the form was no longer a sibling of the anchor elements.  To correct this I went up one level by adding a .parent() selector before .prev().
+
+The order email confirmation issue mentioned in the testing section has not been resolved.
+
+At the moment the discounts for multibuy offers are only valid for items that do not have a colour selection or if the same colour is selected.  This is not a problem at the moment as no items with a colour selection have multibuy discounts, however I will need to implement this functionality if the site owner does decide to apply discounts to items with different colours in the future.
 
 ## **Deployment**
 

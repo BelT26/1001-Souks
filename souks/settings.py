@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['souks-1001.herokuapp.com', 'localhost']
 
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'allauth.socialaccount.providers.facebook',
     'crispy_forms',
     'storages',
     'home',
@@ -69,7 +70,6 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'souks.urls'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-
 
 TEMPLATES = [
     {
@@ -116,7 +116,6 @@ EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
 DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
 
-
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
@@ -126,7 +125,6 @@ LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'souks.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
@@ -141,7 +139,6 @@ WSGI_APPLICATION = 'souks.wsgi.application'
 DATABASES = {
    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -161,7 +158,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -174,7 +170,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
@@ -191,7 +186,7 @@ if 'USE_AWS' in os.environ:
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
         'CacheControl': 'max-age=94608000',
     }
- 
+
     # Bucket Config
     AWS_STORAGE_BUCKET_NAME = 'souks'
     AWS_S3_REGION_NAME = 'eu-west-2'
