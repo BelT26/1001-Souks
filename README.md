@@ -58,7 +58,7 @@ The company name is inspired by the Tales of 1001 Arabian Nights and When constr
 
 It is hoped that site users will arrive at their eventual purchase via one of the following routes
 
-![User Journies](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/user_journies.jpg)
+![User Journies](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/user_journeys.jpg)
 
 ## **Planning**
 
@@ -74,7 +74,11 @@ I used [Balsamiq](https://balsamiq.com/wireframes/) to create wireframes for my 
 
 ### **Database Structure**
 
-I created 8 models for this project.  The relationship between the models and the fields they contain can be seen in the diagram below. 
+I created 8 models for this project. They are summarised in the below table:
+
+![Models](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/model_relationships.jpg)
+
+The relationship between the models and the fields they contain can be seen in the diagram below. 
 
 ![Model Relationships](https://github.com/BelT26/1001-Souks/blob/main/static/screenshots/model_relationships.jpg)
 
