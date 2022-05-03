@@ -592,7 +592,7 @@ This set up will allow your site to use Postgres in deployment and sqlite3 in de
 ## **Credits**
 The logo and text for the site were provided by Jo Jarvis
 
-Photographs were taken by Jo Jarvis apart from the following images on the location pages, which were sourced on Unsplash:
+Photographs were taken by Jo Jarvis apart from the category picture on the ceramics page and the following images on the location pages. These were were sourced on Unsplash:
 
 Marrakech 
 Fez
@@ -601,6 +601,8 @@ Essaouira
 
 ### Future Development Possibilities
 As this is a real project I will be continuing to work on it after submission and plan to implement the following features:
+
+Allow customers to register via social media accounts
 
 Give customers the possibility to add ratings to products
 

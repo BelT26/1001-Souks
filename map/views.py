@@ -60,7 +60,7 @@ def edit_maker(request, maker_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'The maker info has been updated.')
-            return redirect(reverse('city_detail', args=[maker.city.id]))
+            return redirect(reverse('city_detail', args=[maker.city.name]))
         else:
             messages.error(request, 'Unable to update maker. Please '
                                     'check the details entered on the form.')
