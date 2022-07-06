@@ -92,7 +92,7 @@ class StripeWH_Handler:
                     street_address1__iexact=shipping_details.address.line1,
                     street_address2__iexact=shipping_details.address.line2,
                     county__iexact=shipping_details.address.state,
-                    total=total,
+                    order_total=total,
                     original_basket=basket,
                     stripe_pid=pid,
                 )
