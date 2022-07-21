@@ -18,7 +18,7 @@
             <div class="col-xl-6 category-img-container mb-4">
                 <img src="{{category.image.url}}" width="600" alt="{{category.name}}">
             </div>
-            <div class="col-xl-6">
+            <div class="col-xl-6  pr-xl-4">
                 {% if category.subtitle %}
                 <div class="row mt-3">
                     <div class="col text-center">
@@ -26,7 +26,13 @@
                     </div>
                 </div>
                 {% endif %}
-                <p class="lead">{{category.description}}</p>
+                <p class="lead">{{category.description_paragraph1}}</p>
+                {% if category.description_paragraph2 %}
+                <p>{{category.description_paragraph2}}</p>
+                {% endif %}
+                {% if category.description_paragraph3 %}
+                <p>{{category.description_paragraph3}}</p>
+                {% endif %}
             </div>
         </div>
         {% endfor %}        

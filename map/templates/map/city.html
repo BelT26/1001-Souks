@@ -17,9 +17,17 @@
             <div class="col-12 mb-3 col-xl-6 city-img text-center">
                 <img src="{{city.image.url}}" width="600" alt="{{city.name}}">
             </div>
-            <div class="col-xl-6">
-                <p class="lead">{{city.description}}</p>
+            <div class="col-xl-6 pr-xl-4">
+                <p class="lead">{{city.description_paragraph1}}</p>
+                {% if city.description_paragraph2 %}
+                    <p>{{city.description_paragraph2}}</p>
+                {% endif %}
+                {% if city.description_paragraph3 %}
+                    <p>{{city.description_paragraph3}}</p>
+                {% endif %}
             </div>
+            
+
         </div>     
     </div>
     {% for maker in makers %}

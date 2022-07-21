@@ -15,7 +15,9 @@ class Category(models.Model):
     friendly_name = models.CharField(max_length=200, blank=False, null=False,
                                      default='')
     subtitle = models.CharField(max_length=300, blank=True, null=True)
-    description = models.TextField(default='')
+    description_paragraph1 = models.TextField(default='')
+    description_paragraph2 = models.TextField(null=True, blank=True)
+    description_paragraph3 = models.TextField(null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 
@@ -39,7 +41,7 @@ class Product(models.Model):
     city = models.ForeignKey(City, null=True, blank=True,
                              on_delete=models.SET_NULL)
     sku = models.CharField(max_length=200, null=False, blank=False)
-    description = models.TextField()
+    description = models.TextField()    
     price = models.DecimalField(max_digits=6, decimal_places=2)
     multibuy_offer = models.BooleanField(default=False, null=True, blank=True)
     multibuy_num_items = models.IntegerField(null=True, blank=True)

@@ -11,7 +11,9 @@ class City(models.Model):
         verbose_name_plural = 'Cities'
 
     name = models.CharField(max_length=200, blank=False, null=False)
-    description = models.TextField(default='')
+    description_paragraph1 = models.TextField(default='')
+    description_paragraph2 = models.TextField(null=True, blank=True)
+    description_paragraph3 = models.TextField(null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 
