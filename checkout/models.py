@@ -4,7 +4,7 @@ from django_countries.fields import CountryField
 
 from django.db import models
 from django.db.models import Sum
-
+from django.conf import settings
 from products.models import Product
 from profiles.models import UserProfile
 
@@ -52,11 +52,10 @@ class Order(models.Model):
                             (Sum('lineitem_total'))
                             ['lineitem_total__sum'] or 0)
         if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
-            self.delivery_cost = 4.5
+            self.delivery = settings.STANDARD_DELIVERY_CHARGE
         else:
-            self.delivery_cost = 0
-        self.grand_total = self.order_total + self.delivery_cost
-        self.save()
+            self.delivery = 0
+        self.grand_total = self.order_total + self.delivery
         self.save()
 
     def save(self, *args, **kwargs):

@@ -11,8 +11,8 @@ def basket_contents(request):
     total = 0
     product_count = 0    
     basket = request.session.get('basket', {})
-    multibuy_discount = 0    
-  
+    multibuy_discount = 0
+     
     for item_id, item_data in basket.items():
         if isinstance(item_data, int):
             product = get_object_or_404(Product, pk=item_id)
