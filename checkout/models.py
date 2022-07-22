@@ -7,6 +7,7 @@ from django.db.models import Sum
 from django.conf import settings
 from products.models import Product
 from profiles.models import UserProfile
+from decimal import Decimal
 
 
 # below models are adapted from the Boutique Ado project
@@ -52,9 +53,13 @@ class Order(models.Model):
                             (Sum('lineitem_total'))
                             ['lineitem_total__sum'] or 0)
         if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
-            self.delivery = settings.STANDARD_DELIVERY_CHARGE
+            self.delivery = Decimal(settings.STANDARD_DELIVERY_CHARGE)
         else:
             self.delivery = 0
+        
+        if self.original_basket:
+            print(self.original_basket)
+            
         self.grand_total = self.order_total + self.delivery
         self.save()
 

@@ -329,7 +329,7 @@ JavaScript
 ### **Libraries and Frameworks**
 Django
 Bootstrap
-jQuery
+JQuery
 
 ### **Other Tools**
 
@@ -384,7 +384,7 @@ Items appear in the user's basket when they click 'add to basket'.
 
 The basket total updates correctly and multibuy discounts are applied where applicable.
 
-The checkout page works and a confirmation page appears after a successful payment is made.  Stripe reflects that payments have been successful however a confirmation email is not generated to the user.  I spent several hours trying to resolve this issue and eventually contacted Tutor Support.  Unfortunately they were also unable to identify why this bug is occurring.
+The checkout page works and a confirmation page appears after a successful payment is made.  Stripe reflects that payments have been successful and a confirmation email is generated to the user.
 
 Superusers can add, edit and delete products and makers.
 
@@ -398,7 +398,7 @@ The order email confirmation issue mentioned in the testing section has not been
 
 The edit_maker view was returning a 'page not found' error when redirected to the city_detail view.  I realised that this was because I was passing the city.id as an argument rather than the city name.
 
-At the moment the discounts for multibuy offers are only valid for items that do not have a colour selection or if the same colour is selected.  This is not a problem at the moment as no items with a colour selection have multibuy discounts, however I will need to implement this functionality if the site owner does decide to apply discounts to items with different colours in the future.
+The discounts for multibuy offers were only valid for items that did not have a colour selection or if the same colour was selected.  This was resolved with the assistance of Kevin from tutor support who suggested declaring the multibuy discount and item count outside of the loop that added the items to the basket.
 
 ## **Deployment**
 

@@ -5,8 +5,6 @@ Thank you for shopping with 1001 Moroccan Souks. Please find your order confirma
 Order Number: {{ order.order_number }}
 Order Date: {{ order.date }}
 
-Order Total: £{{ order.order_total }}
-
 Your order will be delivered to {{ order.street_address1 }} in {{ order.town_or_city }}.
 
 We hope you love your purchase. If you have any questions, feel free to contact us at contact@1001moroccansouks.co.uk.

@@ -41,7 +41,7 @@ class Product(models.Model):
     city = models.ForeignKey(City, null=True, blank=True,
                              on_delete=models.SET_NULL)
     sku = models.CharField(max_length=200, null=False, blank=False)
-    description = models.TextField()  
+    description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     multibuy_offer = models.BooleanField(default=False, null=True, blank=True)
     multibuy_num_items = models.IntegerField(null=True, blank=True)

@@ -7,19 +7,19 @@ from django.conf import settings
 
 def basket_contents(request):
     """"makes basket accessible across all apps"""
-    basket_items = [] 
+    basket_items = []
     total = 0
-    product_count = 0    
+    product_count = 0
     basket = request.session.get('basket', {})
     multibuy_discount = 0
-     
+
     for item_id, item_data in basket.items():
         if isinstance(item_data, int):
             product = get_object_or_404(Product, pk=item_id)
             multibuy_count = item_data
             total_quantity = item_data
             product_count += item_data
-         
+
             if product.multibuy_offer and multibuy_count >= product.multibuy_num_items:
                 num_offers = multibuy_count // product.multibuy_num_items
                 multibuy_amount = num_offers * product.multibuy_total
@@ -51,7 +51,7 @@ def basket_contents(request):
                     'product': product,
                     'colour': colour,
                     'subtotal': subtotal,
-            })
+                })
             if product.multibuy_offer and multibuy_count >= product.multibuy_num_items:
                 # if this is a multibuy eligible product and there are enough
                 # to meet the threshold,calculate how many offers we have
@@ -63,11 +63,13 @@ def basket_contents(request):
                 # calculate the multibuy discount
                 multibuy_discount += ((total_quantity - extras) * product.price) - multibuy_amount
     # subtract the discount from the final amount
-    total_after_discount = total - multibuy_discount          
-    
-    if total_after_discount < settings.FREE_DELIVERY_THRESHOLD:
+    total_after_discount = total - multibuy_discount
+
+    threshold = Decimal(settings.FREE_DELIVERY_THRESHOLD)
+
+    if total_after_discount < threshold:
         delivery = Decimal(settings.STANDARD_DELIVERY_CHARGE)
-        free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
+        free_delivery_delta = threshold - total
     else:
         delivery = 0
         free_delivery_delta = 0

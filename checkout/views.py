@@ -148,8 +148,9 @@ def checkout_success(request, order_number):
     Handle successful checkouts
     """
     save_info = request.session.get('save_info')
-    order = get_object_or_404(Order, order_number=order_number)
-
+    order = get_object_or_404(Order, order_number=order_number)   
+    current_basket = basket_contents(request)
+    
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
         # Attach the user's profile to the order
@@ -182,6 +183,7 @@ def checkout_success(request, order_number):
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
+        'basket': current_basket
     }
 
     return render(request, template, context)
