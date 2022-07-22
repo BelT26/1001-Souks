@@ -55,11 +55,8 @@ class Order(models.Model):
         if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
             self.delivery = Decimal(settings.STANDARD_DELIVERY_CHARGE)
         else:
-            self.delivery = 0
-        
-        if self.original_basket:
-            print(self.original_basket)
-            
+            self.delivery = 0      
+ 
         self.grand_total = self.order_total + self.delivery
         self.save()
 
